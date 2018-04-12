@@ -20,4 +20,3 @@ def two_sum(nums, target)
     end
     result
 end
-puts two_sum([1,2,3,4,5],6)
