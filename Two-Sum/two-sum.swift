@@ -5,7 +5,6 @@ class Solution {
         for(i, item ) in nums.enumerated(){
             map[item]=i;
         }
-        print(map);
         for(j,item) in nums.enumerated(){
             let x = target-item;
             if let index = map[x]{
