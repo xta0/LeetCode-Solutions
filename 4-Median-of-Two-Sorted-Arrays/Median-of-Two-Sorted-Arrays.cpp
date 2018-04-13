@@ -22,13 +22,11 @@ public:
             }
         }
         if(i==sz1){
-            auto itor = nums2.begin();
-            itor+=j;
+            auto itor = nums2.begin()+j;
             temp.insert(temp.end(), itor,nums2.end());
         }
         if(j==sz2){
-            auto itor = nums1.begin();
-            itor+=i;
+            auto itor = nums1.begin()+i;
             temp.insert(temp.end(), itor,nums1.end());
         }
         if(temp.size() % 2 == 1){
