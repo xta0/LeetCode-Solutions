@@ -1,28 +1,26 @@
 #include <iostream>
+#include <vector>
 #include <string>
 using namespace std;
 
-int main(){
-    string  s("abcaxdxnd");
-    int pos=0,max=0;
-    for(int i=0;i<s.length();++i){
-        char c = s[i];
-        int count = 0;
-        
-        for(int j=i+1; j<s.length(); ++j){
-            char next = s[j];
-            if(c!=next){
-                count++;
-            }else{
-                break;
-            }
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        vector<int> mymap(255,-1);
+        int len = 0,i = -1,tmp;
+        for(int j=0;j < s.length();j++)
+        {
+            tmp = mymap[s.at(j)];
+            i = std::max(tmp,i);
+            mymap[s.at(j)] = j;
+            len = std::max(len,(j-i));
         }
-        if(count > max){
-            max = count;
-            pos = i;
-        }
+        return len;
     }
-    cout<<"pos: "<<pos<<", length:"<<max<<endl;
+};
+int main(){
+    Solution s;
+    cout<<s.lengthOfLongestSubstring("abcaecbb")<<endl;
 
     return 0;
 }
