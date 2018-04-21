@@ -13,6 +13,9 @@ public:
         vector<vector<int>> threes;
         for(int i=0;i<nums.size();++i){
             int x = numbers[i];
+            if(dict[x].size() > 0){
+                continue;
+            }
             auto twos = twoSum(i+1,-x);
             if(twos.size() > 0){
                 for(auto arr : twos){
@@ -20,10 +23,12 @@ public:
                     threes.push_back(arr);
                 }
             }
+            dict[x] = twos;
         }
         return threes;
     }
 private:
+    map<int, vector<vector<int>>> dict;
     vector<int> numbers;
     vector<vector<int>> twoSum(int begin, int target){
         vector<vector<int>> twos;
@@ -33,14 +38,22 @@ private:
             int l = numbers[i];
             int r = numbers[j];
             if(l+r < target){
-                j--;
+                i++;
             }else if(l+r == target){
                 vector<int> tmp;
                 tmp.push_back(l);
                 tmp.push_back(r);
                 twos.push_back(tmp);
-            }else{
                 i++;
+                j--;
+                while (i<j && numbers[i]==numbers[i-1]) {
+                    i++;
+                }
+                while (i<j && numbers[j] == numbers[j+1]) {
+                    j--;
+                }
+            }else{
+                j--;
             }
         }
         return twos;
@@ -49,7 +62,10 @@ private:
 int main(){
     
     Solution s;
-    vector<int> input = {-1,0,1,2,-1,-4};
+//    vector<int> input = {-1,0,1,2,-1,-4};
+//    vector<int> input = {0,0,0,0};
+//    vector<int> input = {0,0,0};
+    vector<int> input = {3,0,-2,-1,1,2};
     s.threeSum(input);
     
     return 0;
