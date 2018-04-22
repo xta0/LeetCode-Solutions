@@ -9,7 +9,10 @@ class Solution{
 public:
     vector<vector<int>> fourSum(vector<int> &nums, int target){
         numbers = nums;
+        vector<vector<int>> fours;
         std::sort(numbers.begin(), numbers.end());
+
+        return fours;
     }
 
 private:
