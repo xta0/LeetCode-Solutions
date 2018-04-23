@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <unordered_map>
 using namespace std;
 
 struct ListNode {
@@ -10,30 +9,24 @@ struct ListNode {
 };
 
 class Solution {
+
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-        
-        unordered_map<int, ListNode* > cache;
-        //cache lists head 
-        for(int i=0;i<lists.size();++i){
-            ListNode* head = lists[i];
-            cache[i] = head;
-        }
         ListNode* head = NULL;
         ListNode* pos = NULL;
-        // vector<ListNode* > candicates;
-        int min_val =1<<30;
         while(true){
-            
             int min_index = -1;
-            bool finished = false;
-            for(auto it: cache){
-                if(it->second != NULL){
-                    int val = it->second->val; 
+            int min_val =1<<30;
+            bool finished = true;
+            for(int i=0;i<lists.size();++i){
+                ListNode* node = lists[i];
+                if(node){
+                    int val = node->val;
                     if(val < min_val){
+                        min_index = i;
                         min_val = val;
-                        min_index = it->first;
                     }
+                    finished = false;
                 }
             }
             if(finished){
@@ -42,23 +35,34 @@ public:
                 ListNode* node = new ListNode(min_val);
                 if(head){
                     pos ->next =  node;
+                    pos = pos-> next;
                 }else{
                     head = new ListNode(min_val);
                     pos = head;
                 }
-                //update cache
-                ListNode* update_node =  cache[min_index];
-                update_node = update_node -> next;
+                //update the head of the list
+                lists[min_index] = lists[min_index]->next;
             }
-        }           
+        }
         return head;
     }
 };
 
 int main(){
-
-
-
-
+    ListNode* n1 = new ListNode(1);
+    n1->next = new ListNode(4);
+    n1->next->next = new ListNode(5);
+    
+    ListNode* n2 = new ListNode(1);
+    n2->next = new ListNode(3);
+    n2->next->next = new ListNode(4);
+    
+    ListNode* n3 = new ListNode(2);
+    n3->next = new ListNode(6);
+    
+    Solution s;
+    vector<ListNode* >v{n1,n2,n3};
+    ListNode* head = s.mergeKLists(v);
+    
     return 0;
 }
