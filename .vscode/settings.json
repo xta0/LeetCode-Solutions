@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "iosfwd": "cpp",
+        "iterator": "cpp",
+        "vector": "cpp",
+        "unordered_map": "cpp",
+        "__tree": "cpp",
+        "map": "cpp",
+        "__hash_table": "cpp"
+    }
+}
