@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "ostream": "cpp",
+        "algorithm": "cpp",
+        "__locale": "cpp"
+    }
+}
