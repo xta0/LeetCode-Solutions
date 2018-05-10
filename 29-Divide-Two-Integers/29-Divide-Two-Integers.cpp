@@ -4,7 +4,7 @@ using namespace std;
 
 
 class Solution {
-public:sss
+public:
     long long  add(long long  a, long long b)
     {
         long long  partialSum, carry;
@@ -28,7 +28,7 @@ public:sss
         for(int i=31; i>=0; i--){
             tmp  = divisor << i; //divisor不变，tmp不断变小，int类型放置左移溢出
             if(dividend >= tmp){
-                result = add(result,1UL<<i);
+                result = add(result,1LL<<i);
                 dividend = (int)substract((int)dividend,(int)tmp);
             }
         }
