@@ -9,6 +9,12 @@
         "__hash_table": "cpp",
         "deque": "cpp",
         "set": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "__bit_reference": "cpp",
+        "__split_buffer": "cpp",
+        "initializer_list": "cpp",
+        "string_view": "cpp",
+        "__string": "cpp",
+        "algorithm": "cpp"
     }
 }
