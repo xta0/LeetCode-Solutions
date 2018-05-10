@@ -6,6 +6,9 @@
         "unordered_map": "cpp",
         "__tree": "cpp",
         "map": "cpp",
-        "__hash_table": "cpp"
+        "__hash_table": "cpp",
+        "deque": "cpp",
+        "set": "cpp",
+        "string": "cpp"
     }
 }

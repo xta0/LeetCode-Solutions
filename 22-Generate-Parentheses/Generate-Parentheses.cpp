@@ -12,26 +12,19 @@ public:
             return {"()"};
         }else {
             vector<string> last = generateParenthesis(n-1);
-            vector<string> ret (last);
+            vector<string> ret;
             for(auto str : last){
-                //left
-                string l = "()" + str;
-                ret.push_back(l);
-                //right
-                string r = str + "()";
-                ret.push_back(r);
-                //enclose
-                string e = "("+str+")";
-                ret.push_back(e);
+                string tmp;
+                for(int i=0;i<=str.length();++i){
+                    tmp = str;
+                    string s = tmp.insert(i, "()");
+                    ret.push_back(s);
+                }
             }
-            //去重
-            auto itor = std::unique(ret.begin(),ret.end());
-            ret.erase(itor,ret.end());
-            for(auto s:ret){
-                cout<<s<<endl;
-            }
+            std::sort(ret.begin(), ret.end());
+            ret.erase(std::unique(ret.begin(), ret.end()), ret.end());
             return ret;
-        }   
+        }  
     }
 };
 
