@@ -15,6 +15,12 @@
         "initializer_list": "cpp",
         "string_view": "cpp",
         "__string": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "bitset": "cpp",
+        "utility": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp"
     }
 }

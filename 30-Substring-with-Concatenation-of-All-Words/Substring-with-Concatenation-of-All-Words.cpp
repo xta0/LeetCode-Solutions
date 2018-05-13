@@ -1,112 +1,67 @@
 #include <iostream>
-#include <queue>
 #include <set>
-#include <string>
+#include <map>
 #include <vector>
+
 using namespace std;
 
-struct TreeNode{
-    string val;
-    vector<TreeNode* >* children;
-    TreeNode(string str):val(str){
-        children = new vector<TreeNode* >();
-    }
-};
 class Solution {
-private:
-    void buildTree(TreeNode* root, vector<string>vec){
-        vector<string> tmp(vec);
-        auto itor = std::find(tmp.begin(), tmp.end(), root->val);
-        tmp.erase(itor);
- 
-        // tmp.erase()
-        for(auto word:tmp){
-            TreeNode* node = new TreeNode(word);
-            root->children->push_back(node);
-        }
-        for(auto child: *root->children){
-            buildTree(child, tmp);
-        }
-    }
-    void traverse(TreeNode* root, string& code, vector<string>& codes){
-        
-        string str = root -> val;
-        code += str;
-        if(root->children->size() > 0){
-            for(auto child: *root->children){
-                traverse(child,code,codes);
-                code.erase(code.length()-str.length(),str.length());
-            }
-            
-        }else{
-            //cout<<code<<endl;
-            codes.push_back(code);
-        }
-    }
-    void logTree(TreeNode* node){
-        queue<TreeNode* > q;
-        q.push(node);
-        while(!q.empty()){
-            TreeNode* front = q.front();
-            q.pop();
-            cout<<front->val<<" ";
-            for(auto child: *front->children){
-                q.push(child);
-            }
-        }
-        cout<<endl;
-    }
-    
 public:
     vector<int> findSubstring(string s, vector<string>& words) {
-        
-        vector<TreeNode* >forest;
-        for(auto word :words){
-            TreeNode* root = new TreeNode(word);
-            buildTree(root, words);
-            logTree(root);
-            forest.push_back(root);
+        if(words.size() == 0){
+            return {};
         }
-        
-        vector<string> results;
-        for(auto tree : forest){
-            vector<string> codes = {};
-            string code = "";
-            traverse(tree,code,codes);
-            results.insert(results.end(),codes.begin(),codes.end());
+        vector<int> ret;
+        int len = words[0].length();
+        int count = words.size();
+        map<string, int>mc; 
+        map<string, int>mi;
+        for(auto word: words){
+            mc[word] = 0;
         }
-
-        set<int> ret;
-        for(auto code : results){
-            size_t pos = s.find(code,0);
-            while(pos != string::npos){
-                ret.insert((int)pos);
-                pos = s.find(code,pos+1);
+        // bool scan = false;
+        int c = 0;
+        for(int r=0, l =0; r<s.length(); r+=len){
+            string str = s.substr(r,len);
+            if(mc.find(str) != mc.end()){
+                if(mc[str] > 0){
+                    /*
+                    * If we hit the mc cache, there are 3 possibilites:
+                    * words:[foo,bar]
+                    * (1) barbar
+                    *        |
+                    * (2) barfoobar
+                    *           |
+                    * (3) barfoothebar
+                    *              |
+                    */
+                    //滑动窗口左边界向右移动，这种case退化为寻找最长不重复字串
+                    l = max(l, mi[str]+len);
+                    if(c < count){
+                        c = 1;
+                    }else if(c == count){
+                        c = 0;
+                        ret.push_back(r);
+                    }
+                    //更新目标词的位置
+                    mi[str] = r;
+                }else{
+                    c++;
+                }
+            }else{
+                if(c>0){
+                    c = 0;
+                }
             }
         }
-        return vector<int>(ret.begin(), ret.end());
-    
+        return ret;        
     }
 };
 
 int main(){
-    
-    Solution s;
-    
- vector<string> words = {"a","b","c","d","a","b","c","d"};
-//    vector<string> words = {"dhvf","sind","ffsl","yekr","zwzq","kpeo","cila","tfty","modg","ztjg","ybty","heqg","cpwo","gdcj","lnle","sefg","vimw","bxcb"};
-    vector<int> ret = s.findSubstring("pjzkrkevzztxductzzxmxsvwjkxpvukmfjywwetvfnujhweiybwvvsrfequzkhossmootkmyxgjgfordrpapjuunmqnxxdrqrfgkrsjqbszgiqlcfnrpjlcwdrvbumtotzylshdvccdmsqoadfrpsvnwpizlwszrtyclhgilklydbmfhuywotjmktnwrfvizvnmfvvqfiokkdprznnnjycttprkxpuykhmpchiksyucbmtabiqkisgbhxngmhezrrqvayfsxauampdpxtafniiwfvdufhtwajrbkxtjzqjnfocdhekumttuqwovfjrgulhekcpjszyynadxhnttgmnxkduqmmyhzfnjhducesctufqbumxbamalqudeibljgbspeotkgvddcwgxidaiqcvgwykhbysjzlzfbupkqunuqtraxrlptivshhbihtsigtpipguhbhctcvubnhqipncyxfjebdnjyetnlnvmuxhzsdahkrscewabejifmxombiamxvauuitoltyymsarqcuuoezcbqpdaprxmsrickwpgwpsoplhugbikbkotzrtqkscekkgwjycfnvwfgdzogjzjvpcvixnsqsxacfwndzvrwrycwxrcismdhqapoojegggkocyrdtkzmiekhxoppctytvphjynrhtcvxcobxbcjjivtfjiwmduhzjokkbctweqtigwfhzorjlkpuuliaipbtfldinyetoybvugevwvhhhweejogrghllsouipabfafcxnhukcbtmxzshoyyufjhzadhrelweszbfgwpkzlwxkogyogutscvuhcllphshivnoteztpxsaoaacgxyaztuixhunrowzljqfqrahosheukhahhbiaxqzfmmwcjxountkevsvpbzjnilwpoermxrtlfroqoclexxisrdhvfsindffslyekrzwzqkpeocilatftymodgztjgybtyheqgcpwogdcjlnlesefgvimwbxcbzvaibspdjnrpqtyeilkcspknyylbwndvkffmzuriilxagyerjptbgeqgebiaqnvdubrtxibhvakcyotkfonmseszhczapxdlauexehhaireihxsplgdgmxfvaevrbadbwjbdrkfbbjjkgcztkcbwagtcnrtqryuqixtzhaakjlurnumzyovawrcjiwabuwretmdamfkxrgqgcdgbrdbnugzecbgyxxdqmisaqcyjkqrntxqmdrczxbebemcblftxplafnyoxqimkhcykwamvdsxjezkpgdpvopddptdfbprjustquhlazkjfluxrzopqdstulybnqvyknrchbphcarknnhhovweaqawdyxsqsqahkepluypwrzjegqtdoxfgzdkydeoxvrfhxusrujnmjzqrrlxglcmkiykldbiasnhrjbjekystzilrwkzhontwmehrfsrzfaqrbbxncphbzuuxeteshyrveamjsfiaharkcqxefghgceeixkdgkuboupxnwhnfigpkwnqdvzlydpidcljmflbccarbiegsmweklwngvygbqpescpeichmfidgsjmkvkofvkuehsmkkbocgejoiqcnafvuokelwuqsgkyoekaroptuvekfvmtxtqshcwsztkrzwrpabqrrhnlerxjojemcxel",words);
-//    vector<int> ret = s.findSubstring("barfoofoobarthefoobarman",words);
-//    vector<string> words = {"word","good","best","good"};
-//    vector<int> ret = s.findSubstring("wordgoodgoodgoodbestword",words);
-//    vector<string> words = {"foo","bar"};
-//    vector<int> ret = s.findSubstring("foobarfoobar",words);
 
 
-    for(auto n : ret){
-        cout<<n<<endl;
-    }
-    
-    
+
+
     return 0;
 }
