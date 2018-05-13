@@ -21,6 +21,7 @@
         "bitset": "cpp",
         "utility": "cpp",
         "chrono": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "ios": "cpp"
     }
 }
