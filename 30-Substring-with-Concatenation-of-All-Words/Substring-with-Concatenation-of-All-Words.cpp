@@ -22,6 +22,7 @@ public:
             d1[w] ++ ;
         }
         
+        //遍历
         for(int i=0;i<=s.length()-len*count+1;++i){
             DICT d2; int j = 0;
             for(; j<count; ++j){
