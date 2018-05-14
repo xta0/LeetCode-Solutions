@@ -1,66 +1,71 @@
 #include <iostream>
-#include <set>
-#include <map>
+#include <unordered_map>
+#include <string>
 #include <vector>
 
 using namespace std;
-
+typedef unordered_map<string, int> DICT;
 class Solution {
 public:
     vector<int> findSubstring(string s, vector<string>& words) {
-        if(words.size() == 0){
+        if(s.length() == 0 || words.size() == 0){
+            return {};
+        }
+        int len = words[0].length();
+        if(len > s.length()){
             return {};
         }
         vector<int> ret;
-        int len = words[0].length();
         int count = words.size();
-        map<string, int>mc; 
-        map<string, int>mi;
-        for(auto word: words){
-            mc[word] = 0;
+        DICT d1;
+        for(auto w : words){
+            d1[w] ++ ;
         }
-        // bool scan = false;
-        int c = 0;
-        for(int r=0, l =0; r<s.length(); r+=len){
-            string str = s.substr(r,len);
-            if(mc.find(str) != mc.end()){
-                if(mc[str] > 0){
-                    /*
-                    * If we hit the mc cache, there are 3 possibilites:
-                    * words:[foo,bar]
-                    * (1) barbar
-                    *        |
-                    * (2) barfoobar
-                    *           |
-                    * (3) barfoothebar
-                    *              |
-                    */
-                    //滑动窗口左边界向右移动，这种case退化为寻找最长不重复字串
-                    l = max(l, mi[str]+len);
-                    if(c < count){
-                        c = 1;
-                    }else if(c == count){
-                        c = 0;
-                        ret.push_back(r);
-                    }
-                    //更新目标词的位置
-                    mi[str] = r;
+        
+        for(int i=0;i<=s.length()-len*count+1;++i){
+            DICT d2; int j = 0;
+            for(; j<count; ++j){
+                string str = s.substr(i+j*len,len);
+                if(d1.find(str) != d1.end()){
+                    d2[str]++;
                 }else{
-                    c++;
+                    break;
                 }
-            }else{
-                if(c>0){
-                    c = 0;
+                if(d2[str] > d1[str]){
+                    break;
                 }
             }
+            if(j == count){
+                ret.push_back(i);
+            }
+            
         }
-        return ret;        
+
+        return ret;
     }
 };
-
 int main(){
 
+    Solution s;
+//    vector<string> words = {"word","student"};
+//    auto r = s.findSubstring("wordgoodstudentgoodword", words);
+    
+//    vector<string> words = {"fooo","barr","wing","ding","wing"};
+//    auto r = s.findSubstring("lingmindraboofooowingdingbarrwingmonkeypoundcake", words);
 
+//    vector<string> words = {"word","good","best","good"};
+//    auto r = s.findSubstring("wordgoodgoodgoodbestword", words);
+
+    // vector<string> words = {"foo","bar"};
+    // auto r = s.findSubstring("barfoothefoobarman", words);
+
+    vector<string> words = {"a"};
+    auto r = s.findSubstring("a", words);
+    
+    for (auto n:r) {
+        cout<<n<<" ";
+    }
+    
 
 
     return 0;
