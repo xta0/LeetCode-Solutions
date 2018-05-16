@@ -4,38 +4,35 @@
 using namespace std;
 
 class Solution {
-
-public:
-    int longestValidParentheses(string s) {
+private:
+    bool valid_parentheses(int l, int r, string s){
         stack<char> stk;
-        int k = 0;
-        int max,count = 0;
-        for(int i=0; i<s.length(); i++){
+        for(int i=l; i<=r; i++){
             if(s[i] == '('){
-                k ++;
                 stk.push(s[i]);
             }else{
                 if(!stk.empty()){
-                    k --;
+                    //find ')'
                     stk.pop();
-                    if(k == 0){
-                        count ++ ;
-                    }
                 }else{
-                    continue;
+                    return false;
                 }
             }
-            max = std::max(max, count);
         }
+        return stk.empty();
+    }
+public:
+    int longestValidParentheses(string s) {
+        int ret;
+        
 
-        return max*2;
+        return ret;
     }
 };
 
 int main(){
     Solution s;
    cout<<s.longestValidParentheses("(()")<<endl;
-   cout<<s.longestValidParentheses("()(()")<<endl;
    cout<<s.longestValidParentheses(")()())")<<endl;
    cout<<s.longestValidParentheses("()(())")<<endl;
    cout<<s.longestValidParentheses("()(()")<<endl;
