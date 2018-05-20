@@ -12,20 +12,29 @@ struct TreeNode {
  };
  
 class Solution {
+private:
+    void goAlongLeftBranch(TreeNode* root, stack<TreeNode* >& st){
+        while(root){
+            st.push(root);
+            root = root->left;
+        }
+    }
 public:
     vector<int> inorderTraversal(TreeNode* root) {
         vector<int> ret;
         stack<TreeNode*> st;
-        TreeNode* pointer = root;
-        while(!st.empty() || pointer){
-            if(pointer){
-                st.push(pointer);
-                pointer = pointer -> left;
+        while(true){
+            goAlongLeftBranch(root,st);
+            if(st.empty()){
+                break;
+            }
+            TreeNode* top = st.top();
+            st.pop();
+            ret.push_back(top->val);
+            if(top->right){
+                root = top->right;
             }else{
-                pointer = st.top();
-                st.pop();
-                ret.push_back(pointer->val);
-                pointer = pointer->right;
+                root = NULL;
             }
         }
         

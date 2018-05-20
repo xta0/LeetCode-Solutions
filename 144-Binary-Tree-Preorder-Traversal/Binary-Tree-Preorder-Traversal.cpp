@@ -10,6 +10,16 @@ using namespace std;
       TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 class Solution {
+private:
+    void visitAlongTheLeftBranch(TreeNode* root, stack<TreeNode* >& stc, vector<int>& vec){
+        while(root){
+            vec.push_back(root->val);
+            if(root->right){
+                stc.push(root->right);
+            }
+            root = root->left;
+        }
+    }
 public:
     vector<int> preorderTraversal(TreeNode* root) {
         if(!root){
@@ -17,18 +27,15 @@ public:
         }
         vector<int> ret;
         stack<TreeNode* > ss;
-        ss.push(root);
-        while(!ss.empty()){
+        while(true){
+            visitAlongTheLeftBranch(root,ss,ret);
+            if(ss.empty()){
+                break;
+            }
             TreeNode* top = ss.top();
             ss.pop();
-            ret.push_back(top->val);
-            if(top->right){
-                ss.push(top->right);
-            }
-            if(top->left){
-                ss.push(top->left);
-            }
-        }
+            root = top;
+        } 
         return ret;
     }
 };
