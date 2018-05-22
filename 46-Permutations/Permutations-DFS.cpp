@@ -6,19 +6,40 @@ using namespace std;
 //全排列-深搜
 class Solution {
 private:
+    void dfs( vector<int>& nums, int cl, vector<bool>& visited, vector<int>& vec, vector<vector<int>>& results){
+        if(cl == nums.size()){
+            results.push_back(vec);
+            return;
+        }
+        
+        for(int i = 0; i<nums.size(); ++i){
+            if(visited[i] == true){
+                continue;
+            }
+            int n = nums[i];
+            vec.push_back(n);
+            visited[i] = true;
+            cl++;
+            dfs(nums,cl, visited, vec,results);
+            cl--;
+            vec.pop_back();
+            visited[i] = false;
+        }
+    }
 
 public:
-    //[1] -> { [1] }
-    //[1,2] -> { 1,[2] } -> { [1,2], [2,1] }
-    //[1,2,3] -> {1,[2,3]} -> {1,{2,[3]} } -> {[1,[2,3]],[1,[3,2]]}->{[1,2,3],[2,1,3],[2,3,1],[1,3,2],[3,1,2],[3,2,1]}
     vector<vector<int>> permute(vector<int>& nums) {
-        
-    }
+        vector<vector<int>> ret;
+        vector<int> vec;
+        vector<bool> used;
+        dfs(nums,0,used,vec,ret);
+        return ret;
+    };
 };
 
 int main(){
     Solution s;
-    vector<int> input({1,2,3,4});
+    vector<int> input({1,2,3});
     auto result = s.permute(input);
     for(auto vec: result){
         cout<<"[ ";
