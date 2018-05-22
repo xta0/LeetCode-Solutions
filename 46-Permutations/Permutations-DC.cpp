@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-//全排列, 动态规划
+//全排列, Divide and Conquer
 class Solution {
 public:
     //[1] -> { [1] }
