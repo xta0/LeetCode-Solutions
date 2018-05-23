@@ -4,7 +4,7 @@ using namespace std;
 
 class Solution {
 public:
-    
+    //subset divde&conqer
     vector<vector<int>> subsets(vector<int>& nums) {
         if(nums.size() == 0){
             return {};
