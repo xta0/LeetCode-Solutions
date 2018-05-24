@@ -14,10 +14,9 @@ public:
             return {nums};
         }else{
             vector<vector<int>> ret;
-            int n = nums[0];
-            auto remain(nums);
-            remain.erase(find(remain.begin(), remain.end(), n));
-            auto last_vectors = permute(remain);
+            int n = nums.back();
+            nums.pop_back();
+            auto last_vectors = permute(nums);
             for(auto vec: last_vectors){
                 for(int i=0;i<=vec.size();++i){
                     auto tmp (vec);

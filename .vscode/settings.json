@@ -22,6 +22,16 @@
         "utility": "cpp",
         "chrono": "cpp",
         "limits": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "__locale": "cpp",
+        "__config": "cpp",
+        "__nullptr": "cpp",
+        "cstddef": "cpp",
+        "exception": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "type_traits": "cpp",
+        "typeinfo": "cpp",
+        "ostream": "cpp"
     }
 }
