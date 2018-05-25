@@ -19,12 +19,10 @@ private:
             return;
         }
         //剪枝2
-        if(target < 0){
+        //1.target < 0
+        //2.走到叶子节点
+        if(target < 0 || index >= nums.size()){
             return ;
-        }
-        //走到叶子节点
-        if( index >= nums.size() ){
-            return;
         }
         for(int i = index; i<=rbounds; ++i){
             int n = nums[i];
