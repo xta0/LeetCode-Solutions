@@ -3,6 +3,7 @@
 #include <vector>
 using namespace std;
 
+//hash-map
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
