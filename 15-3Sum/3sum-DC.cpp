@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//Divid & conqure
+//1+(1+2) -> 1+twosum(1,2)
 class Solution {
     
 public:
