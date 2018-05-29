@@ -5,6 +5,9 @@
 
 using namespace std;
 
+//滑动窗口
+//一个map+两个指针
+//动态trace字符串的范围
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
