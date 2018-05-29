@@ -7,59 +7,76 @@ using namespace std;
 class Solution {
 public:
     int firstMissingPositive(vector<int>& nums) {
-        int pmin = 0;
-        int pmax = 0;
+        
+        //最小值
         int vmin = INT_MAX;
+        int pmin = 0;
+
+        //最大值
+        int pmax = 0;
         int vmax = INT_MIN;
-        map<int,int> dict;
-        int ret = 0;
+
+        //次小值
+        int vmin2 = 0;
+        int pmin2 = 0;
+        
         for(int i=0;i<nums.size();++i){
             int x = nums[i];
-            dict[x] = i;
+
+            //fin min
             if(x >0 && x<vmin ){
+                vmin2 = vmin;
                 vmin = x;
                 pmin = i;
+            }else{
+                //x > vmin
+                //find min2
+                if(x > 0 && x < vmin2){
+                    vmin2 = x;
+                    pmin2 = i;
+                }
             }
+            //find max
             if(x>0 && x >vmax){
                 pmax = i;
                 vmax = x;
             }
         }
         cout<<"min:"<<vmin<<", index:"<<pmin<<endl;
-        cout<<"max:"<<vmax<<", index:"<<pmax<<endl;
-        if( vmin == vmax){
-            if(vmin == 1){
-                return 2;
-            }else{
-                return 1;
-            }
-        }
+        cout<<"max"<<vmax<<", index"<<pmax<<endl;
+        cout<<"min2:"<<vmin2<<", index:"<<pmin2<<endl;
+ 
+        //enumerate all possiblities
         if(vmin > 1){
             return 1;
-        }
-        //pmin = 0;
-        bool flag = false;
-        for(int i=vmin; i<=vmax;i++){
-            if(dict.find(i) == dict.end()){
-                ret = i;
-                flag = true;
-                cout<<i<<endl;
-                break;
-            }
-        }
-        if(!flag){
-            return nums[pmax]+1;
         }else{
-            return ret;
+            //vmin == 1
+            if(vmin2 == vmin){
+                return 2;
+            }else if(vmin2 == vmin+1){
+                if(vmax == vmin2+1){
+                    return vmax+1;
+                }else{
+                    return vmin2+1;
+                }
+            }else{
+                return vmin+1;
+            }
         }
     }
 };
 int main(){
     Solution s;
-//    vector<int> v = {1,2,0};
-    vector<int> v = {3,4,-1,1};
-    //  vector<int> v = {7,8,9,11,12};
-    cout<<s.firstMissingPositive(v)<<endl;
+    vector<int> v1 = {1,2,0}; //3
+    vector<int> v2 = {3,4,-1,1}; //2
+    vector<int> v3 = {7,8,9,11,12}; //1
+    vector<int> v4 = {1,2,3}; //4
+    vector<int> v5 = {4,1,2,3}; //4
+    cout<<s.firstMissingPositive(v1)<<endl;
+    cout<<s.firstMissingPositive(v2)<<endl;
+    cout<<s.firstMissingPositive(v3)<<endl;
+    cout<<s.firstMissingPositive(v4)<<endl;
+    cout<<s.firstMissingPositive(v5)<<endl;
     
     
     

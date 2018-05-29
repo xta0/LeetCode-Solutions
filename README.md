@@ -2,7 +2,7 @@
 
 Solutions for LeetCode Problems
 
-## Problems Solution Classificaion
+##  Solution Classificaion
 
 ### Slide Window
 
@@ -64,3 +64,7 @@ Solutions for LeetCode Problems
 ### Binary Search
 
 - [34. Search for a Range](https://leetcode.com/problems/search-for-a-range/description/)
+
+### Bitwise
+
+- [29. Divide Two Integers](https://leetcode.com/problems/divide-two-integers/submissions/1)
