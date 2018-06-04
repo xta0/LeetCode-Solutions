@@ -4,6 +4,14 @@ Solutions for LeetCode Problems
 
 ##  Solution Classificaion
 
+### Linked List
+
+解链表问题关键在于灵活创建并使用头尾指针
+
+1. 翻转链表只需`O(n)`时间 + `O(1)`空间
+
+- [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+
 ### Slide Window
 
 - [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
@@ -15,6 +23,14 @@ Solutions for LeetCode Problems
 
 
 ### Palindrom
+
+三类回文问题：
+
+1. 寻找回文串，两种解法
+    - 中心扩散
+    - 动态规划
+
+- 题目
 
 - [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description/)
 - [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/description/)
@@ -37,6 +53,18 @@ Solutions for LeetCode Problems
 
 
 ### DFS & Backtracking
+
+求深搜与回溯问题的核心在于构建正确的解空间树（决策树），DFS深搜重要三步：
+
+1. choose（set state） 
+2. select (递归)
+3. unchoose (backtracking, reset state)
+
+重要的有下面几类问题
+
+1. 排列组合问题，区别在于for循环的起始index计算方式，该类问题也可以使用分治法求解（减而治之）
+2. N皇后和数独问题，难点在于递归函数的入参设计
+
 
 - [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/)
 - [46. Permutations](https://leetcode.com/problems/permutations/description/)
