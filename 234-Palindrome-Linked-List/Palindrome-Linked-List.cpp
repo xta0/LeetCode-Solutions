@@ -14,15 +14,19 @@ struct ListNode {
 class Solution {
 private:
     ListNode *reverseList(ListNode *head){
-        ListNode* last = nullptr;
-        ListNode* tail = head;
-        while(tail){
-            ListNode* node = new ListNode(tail->val);
-            node -> next = last;
-            last = node;
-            tail = tail->next;
+        ListNode*  second = nullptr;
+        ListNode*  first = nullptr;
+        while(head){
+            //先保存head
+            first  = head;
+            //head指向下一个节点，维持正常循环
+            head = head->next;
+            //head下一个节点指向null
+            first->next = second;
+            //second指向head
+            second = first;
         }
-        return last;
+        return second;
     }
 public:
     bool isPalindrome(ListNode* head) {
@@ -43,14 +47,15 @@ public:
         ListNode* rhead = nullptr;
         while(tail){
             if(k == cut_index){
-                rhead = tail; 
+                rhead = tail;
                 break;
             }
+            k++;
             tail = tail->next;
         }
         //翻转链表
         rhead = reverseList(rhead);
-
+        
         //比对
         while(rhead&&head){
             if(rhead->val != head->val){
@@ -67,8 +72,9 @@ int main(){
     Solution s;
     ListNode* node = new ListNode(1);
     node->next = new ListNode(2);
-    node->next->next = new ListNode(3);
-    node->next->next->next = new ListNode(2);
-    node->next->next->next->next = new ListNode(1);
+//    node->next->next = new ListNode(3);
+//    node->next->next->next = new ListNode(2);
+//    node->next->next->next->next = new ListNode(1);
+    cout<<s.isPalindrome(node)<<endl;
     return 0;
 }

@@ -9,8 +9,14 @@ struct ListNode
 };
 
 /*
-迭代法：O(n) + O(1)
-*/
+ 迭代法：O(n) + O(1)
+ 不修改原链表
+ 1 --> 2 --> 3 --> 4
+ loop#1: 1 --> null   |  2-->3-->4
+ loop#2: 2 --> 1 --> null | 3-->4
+ loop#3: 3 --> 2 --> 1 --> null | 4
+ loop#4: 4 --> 3 --> 2 --> 1 --> null |
+ */
 class Solution
 {
   public:
