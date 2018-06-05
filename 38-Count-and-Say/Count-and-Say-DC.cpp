@@ -3,6 +3,8 @@
 #include <vector>
 using namespace std;
 
+//分治
+//Decrease & Conqure
 class Solution {
 public:
     string countAndSay(int n) {
