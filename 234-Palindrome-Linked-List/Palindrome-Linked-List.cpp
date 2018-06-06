@@ -9,6 +9,7 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
+//找到中点，后一半列表翻转后和前一半列表进行比较
 //翻转 linked list 只需要O(n)的时间
 //一共需要O(4*n)时间
 class Solution {
