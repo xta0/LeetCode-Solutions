@@ -17,7 +17,12 @@ public:
         ListNode* p2 = head->next;
         while(p1 && p2){
             if(p1 -> val != p2->val){
-                p1 = p1->next;
+                if(!p2->next){
+                    break;
+                }
+                if(p2->next != p2){
+                    p1 = p1->next;
+                }
                 p2 = p2->next;
             }else{
                 while( p1->val == p2->val){
@@ -32,15 +37,17 @@ public:
         return head;
     }
 };
+
 int main(){
 
-    
     Solution s;
     ListNode* node = new ListNode(1);
     node->next = new ListNode(2);
     node->next->next = new ListNode(3);
-    node->next->next->next = new ListNode(4);
-    node->next->next->next->next = new ListNode(5);
+    node->next->next->next = new ListNode(3);
+    node->next->next->next->next = new ListNode(4);
+    node->next->next->next->next->next = new ListNode(4);
+    node->next->next->next->next->next->next = new ListNode(5);
     
     ListNode* head = s.deleteDuplicates(node);
     while(head){
@@ -48,5 +55,8 @@ int main(){
         head=head->next;
     }
     cout<<endl;
+    return 0;
+
+
     return 0;
 }
