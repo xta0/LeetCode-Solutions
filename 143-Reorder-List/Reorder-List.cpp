@@ -13,19 +13,18 @@ private:
         ListNode* p1 = nullptr;
         ListNode* p2 = nullptr;
         while(head){
-            p2 = head;
+            p1 = head;
             head = head->next;
-            p2 -> next = p1;
-            p1 = p2;
+            p1 -> next = p2;
+            p2 = p1;
         }
-        return p1;
+        return p2;
     }
 public:
     void reorderList(ListNode* head) {
         if(!head){
-            return nullptr;
+            return;
         }
-        
         int len = 0;
         ListNode* p = head;
         while(p){
@@ -49,14 +48,23 @@ public:
             tmpp->next = tmpq;
             tmpq->next = p; 
         }
-        return head;
     }
 };
 
 
 int main(){
 
-
+    Solution s;
+    ListNode* head = new ListNode(1);
+    head->next = new ListNode(2);
+    head->next->next = new ListNode(3);
+    head->next->next->next = new ListNode(4);
+    s.reorderList(head);
+    while(head){
+        cout<<head->val<<endl;
+        head = head->next;
+    }
+    return 0;
 
 
     return 0;
