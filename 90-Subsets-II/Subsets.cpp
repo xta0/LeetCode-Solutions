@@ -1,31 +1,31 @@
 #include <iostream>
+#include <set>
 #include <vector>
 using namespace std;
 
 class Solution {
 public:
-    vector<vector<int>> subsets(vector<int>& nums) {
+    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
         if(nums.size() == 0){
-            return {{}};
+            return {};
         }else{
+            set<vector<int>> ret ;
             //get the last element
             int back = nums.back();
             nums.pop_back();
-            vector<vector<int>> last = subsets(nums);
-            vector<vector<int>> ret(last);
+            vector<vector<int>> last = subsetsWithDup(nums);
             for(auto vec : last){
                 vec.push_back(back);
-                ret.push_back(vec);
+                ret.insert(vec);
             }
-            return ret;
+            return {ret.begin(),ret.end()};
         }
     }
 };
 int main(){
-
     Solution s;
-    vector<int> input = {1,2,3};
-    vector<vector<int>>ret = s.subsets(input);
+    vector<int> v = {1,2,2};
+    vector<vector<int>>ret = s.subsetsWithDup(v);
     for(auto vec: ret){
         cout<<"[";
         for(auto n : vec){
@@ -33,5 +33,6 @@ int main(){
         }
         cout<<"],"<<endl;
     }
+
     return 0;
 }

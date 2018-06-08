@@ -25,47 +25,55 @@ public:
         if(!head){
             return;
         }
+        //step1: find length of the list, O(n)
         int len = 0;
         ListNode* p = head;
         while(p){
             p = p->next;
             len ++;
         }
-        int index = len % 2 == 0 ? len/2 : len/2+1;
+        if(len <= 2){
+            return ;
+        }
+        
+        //step2: reverse the second half of the list, O(n)
+        int index = len%2 == 0?len/2:len/2+1 ;
         int k = 0;
         p = head;
-        while(k != index){
+        while(k < index - 1){
             p = p->next;
             k++;
         }
-        ListNode* q = reverseList(p);
+        ListNode* q = p->next;
+        p->next = nullptr;
+        q = reverseList(q);
         p = head;
+        
+        //step3: merge two list, O(n)
         while(q){
             ListNode* tmpp  = p;
             p = p->next;
             ListNode* tmpq = q;
             q = q->next;
             tmpp->next = tmpq;
-            tmpq->next = p; 
+            tmpq->next = p;
         }
     }
 };
 
 
 int main(){
-
+    
     Solution s;
     ListNode* head = new ListNode(1);
     head->next = new ListNode(2);
     head->next->next = new ListNode(3);
     head->next->next->next = new ListNode(4);
+    head->next->next->next->next = new ListNode(5);
     s.reorderList(head);
     while(head){
-        cout<<head->val<<endl;
+        cout<<head->val<<" ";
         head = head->next;
     }
-    return 0;
-
-
     return 0;
 }
