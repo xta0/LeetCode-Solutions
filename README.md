@@ -6,9 +6,12 @@ Solutions for LeetCode Problems
 
 ### Linked List
 
-解链表问题关键在于灵活创建并使用头尾指针
+解链表问题关键在指针移动，题型有判断链表呈环，交叉，寻找环首元素
 
 1. 翻转链表只需`O(n)`时间 + `O(1)`空间
+
+
+
 
 - [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
 
@@ -96,3 +99,4 @@ Solutions for LeetCode Problems
 ### Bitwise
 
 - [29. Divide Two Integers](https://leetcode.com/problems/divide-two-integers/submissions/1)
+- [136. Single Number](https://leetcode.com/problems/single-number/description/)
