@@ -10,7 +10,7 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-
+//BFS，模板同#102
 class Solution {
 public:
     int minDepth(TreeNode* root) {

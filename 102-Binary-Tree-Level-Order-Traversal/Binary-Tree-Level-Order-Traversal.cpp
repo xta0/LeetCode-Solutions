@@ -1,5 +1,5 @@
 #include <iostream>
-#include <algorithm>
+#include <vector>
 #include <queue>
 
 using namespace std;
@@ -9,24 +9,25 @@ struct TreeNode {
     TreeNode *left;
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
-//BFS，模板同#102
+ };
+ //BFS 解法，模板
 class Solution {
 public:
-    int maxDepth(TreeNode* root) {
-        if(!root){
-            return 0;
+    vector<vector<int>> levelOrder(TreeNode* root) {
+         if(!root){
+            return {};
         }
-        int depth = 0;
-        queue<TreeNode* > q;
+        vector<vector<int>> ret;
+        queue<TreeNode* >q;
         q.push(root);
         while(!q.empty()){
-            depth ++;
-            int k = q.size();
-            for(int i =0; i<k; ++i){
+            queue<TreeNode* >::size_type sz = q.size();
+            vector<int> lv;
+            //循环次数为每层元素个数
+            for(int i =0; i<sz; ++i){
                 TreeNode* node = q.front();
                 q.pop();
+                lv.push_back(node->val);
                 if(node->left){
                     q.push(node->left);
                 }
@@ -34,18 +35,16 @@ public:
                     q.push(node->right);
                 }
             }
+            ret.push_back(lv);
         }
-        return depth;
+        return ret;
     }
 };
 
 int main(){
-    TreeNode* root = new TreeNode(3);
-    root->left = new TreeNode(9);
-    root->right = new TreeNode(20);
-    root->right->left = new TreeNode(15);
-    root->right->right = new TreeNode(7);
-    Solution s;
-    cout<<s.maxDepth(root)<<endl;
+
+
+
+
     return 0;
 }
