@@ -33,6 +33,8 @@
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "ostream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "__functional_03": "cpp",
+        "functional": "cpp"
     }
 }

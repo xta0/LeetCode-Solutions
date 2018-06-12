@@ -13,41 +13,30 @@ struct TreeNode {
 
 
 class Solution {
-public:
-    bool isSymmetric(TreeNode* root) {
-        queue<TreeNode* > q;
-        q.push(root);
-        int level = -1;
-        while(!q.empty()){
-            level ++;
-            string s("");
-            for(int i =0; i<std::pow(2,level); ++i){
-                TreeNode* node = q.front();
-                q.pop();
-                if(node){
-                    s += to_string(node->val);
-                    if(node->left){
-                        q.push(node->left);
-                    }else{
-                        q.push(NULL);
-                    }
-                    if(node->right){
-                        q.push(node->right);
-                    }else{
-                        q.push(NULL);
-                    }
-                }else{
-                    s+="*";
-                }
-            }
-            string s1 = s;
-            cout<<s1<<endl;
-            reverse(s1.begin(), s1.end());
-            if(s1 != s){
+private:
+    bool compare(TreeNode* root1, TreeNode* root2){
+        if(!root1 && !root2){
+            return true;
+        }else if( !root1 || !root2 ){
+            return false;
+        }else{
+            if(root1 -> val == root2->val){
+                //compare recursively
+                //1. root1->left and root2->right
+                //2. root1->right and root1 -> left
+                return compare(root1->left, root2->right)&&compare(root1->right, root2->left);
+            }else{
                 return false;
             }
         }
-        return  true;
+    }
+public:
+    bool isSymmetric(TreeNode* root) {
+        if(!root){
+            return true;
+        }
+        //spit into two trees
+        return compare(root->left, root->right);
     }
 };
 
@@ -56,7 +45,7 @@ int main(){
     root->left = new TreeNode(2);
     root->right = new TreeNode(2);
     root->left->left = new TreeNode(3);
-    root->right->right = new TreeNode(3);
+    root->right->left = new TreeNode(3);
     Solution s;
     cout<<s.isSymmetric(root)<<endl;
     
