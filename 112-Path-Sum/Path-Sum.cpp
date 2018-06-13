@@ -9,7 +9,7 @@ struct TreeNode {
 };
 class Solution {
     //dfs + backtracking
-    //dfs尽量不要设计返回值，很复杂，传入引用做判断条件
+    //dfs尽量不要设计返回值，很复杂，传入引用变量做判断条件
     void dfs(TreeNode* root, int& sum, int target, bool& found){
         if(!root){
             return;
@@ -18,7 +18,7 @@ class Solution {
         dfs(root->left,sum,target,found);
         dfs(root->right,sum,target,found);
     
-        //check point
+        //检查叶节点位置
         if(!root->left && !root->right){
             if(sum == target){
                 found =true;
