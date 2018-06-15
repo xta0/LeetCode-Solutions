@@ -11,7 +11,8 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-
+//模板同 #100
+//递归比较
 class Solution {
 private:
     bool compare(TreeNode* root1, TreeNode* root2){
