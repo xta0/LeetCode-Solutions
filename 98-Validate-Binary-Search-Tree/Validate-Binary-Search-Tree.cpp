@@ -10,28 +10,36 @@ struct TreeNode{
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+//中序遍历验证
 class Solution {
+    void dfs(TreeNode* root, vector<int>& arr){
+        if(!root){
+            return;
+        }
+        dfs(root->left,arr);
+        arr.push_back(root->val);
+        dfs(root->right,arr);
+    }
 public:
     bool isValidBST(TreeNode* root) {
         if(!root){
-            return false;
+            return true;
         }
         if(!root->left && !root->right){
             return true;
         }
-        
-        bool bl = false, br=false;
-        if(root->left){
-            bl = root->val > root->left->val;
+        vector<int> vec;
+        dfs(root,vec);
+        bool b = true;
+        for(int i=0;i<vec.size();i++){
+            if(i > 0){
+                if(vec[i] <= vec[i-1]){
+                    b = false;
+                    break;
+                }
+            }
         }
-        if(root->right){
-            br = root->val < root->right->val;
-        }
-        if(bl && br){
-            return isValidBST(root->left) && isValidBST(root->right);
-        }else{
-            return false;
-        } 
+        return b;
     }
 };  
 
