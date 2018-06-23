@@ -1,17 +1,10 @@
-# LeetCode-Solutions
-
-Solutions for LeetCode Problems
-
-##  Solution Classificaion
+##  Problems
 
 ### Linked List
 
 解链表问题关键在指针移动，题型有判断链表呈环，交叉，寻找环首元素
 
 1. 翻转链表只需`O(n)`时间 + `O(1)`空间
-
-
-
 
 - [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
 
@@ -100,3 +93,8 @@ Solutions for LeetCode Problems
 
 - [29. Divide Two Integers](https://leetcode.com/problems/divide-two-integers/submissions/1)
 - [136. Single Number](https://leetcode.com/problems/single-number/description/)
+
+### Matrix 
+
+- [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/description/)
+- [240. Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/description/)
