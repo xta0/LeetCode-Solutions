@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <string>
+#include <set>
 using namespace std;
 
 class Solution {
@@ -9,17 +9,17 @@ public:
         if(nums1.size() == 0 || nums2.size() == 0){
             return {};
         }
-        sort(nums1.begin(), nums1.end());
-        sort(nums2.begin(), nums2.end());        
-        int l1 = 0, l2 = 0;
-        while(l1<nums1.size() && l2<nums2.size()){
-            //skip same elements
-            while(nums1[l1] == nums2[l1+1]){
-                l1++;
-            }
-            while(nums2[l2] == )
-
+        set<int> sets;
+        set<int> ret;
+        for(auto x1: nums1){
+            sets.insert(x1);
         }
+        for(auto x2:nums2){
+            if(sets.find(x2) != sets.end()){
+                ret.insert(x2);
+            }
+        }
+        return {ret.begin(), ret.end()};
     }
 };
 

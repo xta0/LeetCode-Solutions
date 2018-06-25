@@ -17,9 +17,8 @@ public:
         }
         //binary search
         int left = 0; int right = (int)nums.size()-1;
-        int mid = 0;
         while(left <= right){
-            mid = (left+right)/2;
+            int mid = (left+right)/2;
             //case 1: mid = left or mid = right
             if(mid == left || mid == right){
                 return min(nums[left], nums[right]);
@@ -28,11 +27,9 @@ public:
             if((nums[mid] < nums[mid-1]) && (nums[mid] < nums[mid+1])){
                 return nums[mid];
             }
-            
-            //narrow down search range by compare nums[mid] and nums[left]
+            //narrow down search range by comparing nums[mid] and nums[left]
             //then compare nums[left] and nums[right]
             if(nums[mid] >=  nums[left]){
-                
                 if(nums[left] > nums[right]){
                     left = mid + 1;
                 }else{
