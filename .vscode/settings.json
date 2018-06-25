@@ -36,6 +36,7 @@
         "iostream": "cpp",
         "__functional_03": "cpp",
         "functional": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "list": "cpp"
     }
 }

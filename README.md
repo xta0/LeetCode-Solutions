@@ -1,16 +1,27 @@
-##  Problems
+#  Data Structure
 
-### Linked List
+## Array
+
+|---|---|---|
+| search | medium | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/) |
+|| easy | [349. Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/description/) | 
+
+
+## Linked List
 
 解链表问题关键在指针移动，题型有判断链表呈环，交叉，寻找环首元素
 
 1. 翻转链表只需`O(n)`时间 + `O(1)`空间
 
-- [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+| [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/) | easy |
+
+
 
 ### Slide Window
 
 - [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+
+## String
 
 ### Anagrams
 
@@ -76,7 +87,7 @@
 ### Dynamic Programming
 
 - [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/)
-
+- [62. Unique Paths](https://leetcode.com/problems/unique-paths/description/)
 
 ### BinaryTree
 
@@ -98,3 +109,9 @@
 
 - [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/description/)
 - [240. Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/description/)
+
+# Algorithms
+
+## Binary Search
+
+二分法对有序数组中有大量重复元素的情况效果不好
