@@ -2,6 +2,17 @@
 
 ## Array
 
+### Rotated Array
+
+Binary Search
+
+### Duplicated
+
+1. find
+2. delete
+
+
+
 |---|---|---|
 | search | medium | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/) |
 || easy | [349. Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/description/) | 

@@ -37,6 +37,8 @@
         "__functional_03": "cpp",
         "functional": "cpp",
         "ratio": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "tuple": "cpp",
+        "memory": "cpp"
     }
 }
