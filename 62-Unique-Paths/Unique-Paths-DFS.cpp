@@ -35,9 +35,8 @@ public:
         dfs(m,n,pt,target,num);
         pt.first -= 1;
         cout<<"("<<pt.first<<","<<pt.second<<") return"<<endl;;
-        
-        
     }
+    
     int uniquePaths(int m, int n) {
         pair<int,int> pt = {1,1};
         pair<int,int> target = {m,n};
