@@ -4,21 +4,22 @@
 using namespace std;
 
 /*
-Input:
-[
-  [1,3,1],
-  [1,5,1],
-  [4,2,1]
-]
-Output: 7
-Explanation: Because the path 1→3→1→1→1 minimizes the sum.
-*/
-//DP 
+ Input:
+ [
+ [1,3,1],
+ [1,5,1],
+ [4,2,1]
+ ]
+ Output: 7
+ Explanation: Because the path 1→3→1→1→1 minimizes the sum.
+ */
+//DP
 class Solution {
     
 private:
     void helper(vector<vector<int>>& grid, int i, int j, int& sum){
-        if(i<0 && j<0){
+        if(i==0 && j==0){
+            sum += grid[i][j];
             return ;
         }
         sum += grid[i][j];
@@ -38,8 +39,8 @@ private:
     }
 public:
     int minPathSum(vector<vector<int>>& grid) {
-        int x = grid.size()-1;
-        int y = grid[0].size()-1;
+        int x = (int)grid.size()-1;
+        int y = (int)grid[0].size()-1;
         int sum = 0;
         helper(grid,x,y,sum);
         return sum;
@@ -47,9 +48,16 @@ public:
 };
 
 int main(){
-
-
-
-
+    
+    vector<vector<int>> grid  = {
+        {1,4,8,6,2,2,1,7},
+        {4,7,3,1,4,5,5,1},
+        {8,8,2,1,1,8,0,1},
+        {8,9,2,9,8,0,8,9},
+        {5,7,5,7,1,8,5,5},
+        {7,0,9,4,5,6,5,6},
+        {4,9,9,7,9,1,9,0}};
+    Solution s;
+    cout<<s.minPathSum(grid)<<endl;
     return 0;
 }
