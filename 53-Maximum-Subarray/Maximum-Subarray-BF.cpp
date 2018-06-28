@@ -3,26 +3,22 @@
 using namespace std;
 
 //Brutal Force solution
+//Brutal Force solution
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
         if(nums.size() == 1){
             return nums[0];
         }
-        int ret = INT_MIN;
+        int maxSum = nums[0];
         for(int i =0;i <nums.size(); ++i){
-            int sum = nums[i];
-               if(sum > ret){
-                    ret = sum;
-                }
-            for(int j=i+1; j<nums.size(); ++j){
+            int sum = 0;
+            for(int j=i; j<nums.size(); ++j){
                 sum += nums[j];
-                if(sum > ret){
-                    ret = sum;
-                }
+                maxSum = max(maxSum,sum);
             }
         }
-        return ret;
+        return maxSum;
     }
 };
 
