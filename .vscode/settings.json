@@ -39,6 +39,10 @@
         "ratio": "cpp",
         "list": "cpp",
         "tuple": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "__mutex_base": "cpp",
+        "istream": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp"
     }
 }
