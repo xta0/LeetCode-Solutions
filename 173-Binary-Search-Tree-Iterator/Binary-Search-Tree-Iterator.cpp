@@ -12,6 +12,7 @@ struct TreeNode{
 
 class BSTIterator {
     vector<int> arr;
+    int index = 0;
     void dfs(TreeNode* root, vector<int>& arr){
         if(!root){
             return;
@@ -22,17 +23,17 @@ class BSTIterator {
     }
 public:
     BSTIterator(TreeNode *root) {
-        
+        dfs(root,arr);
     }
 
     /** @return whether we have a next smallest number */
     bool hasNext() {
-        
+        return index < arr.size();
     }
 
     /** @return the next smallest number */
     int next() {
-        
+        return arr[index++];
     }
 };
 
