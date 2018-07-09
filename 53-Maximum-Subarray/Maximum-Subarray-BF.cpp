@@ -3,7 +3,6 @@
 using namespace std;
 
 //Brutal Force solution
-//Brutal Force solution
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
