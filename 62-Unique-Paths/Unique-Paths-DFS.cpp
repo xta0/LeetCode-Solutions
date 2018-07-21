@@ -25,12 +25,12 @@ public:
             return;
         }
         
-        //衡向
+        //向右前进
         pt.second += 1;
         dfs(m,n,pt,target,num);
         pt.second -= 1;
         
-        //纵向
+        //向下前进
         pt.first += 1;
         dfs(m,n,pt,target,num);
         pt.first -= 1;
