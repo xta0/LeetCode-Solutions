@@ -13,8 +13,11 @@ public:
         int s = 0;
         for(int i=1; i<prices.size();i++){
             if(prices[i] > prices[i-1]){
+                if(prices[i] > s){
+                    s = prices[i];
+                } 
                 b = prices[i-1];
-                s = prices[i];
+                
             }
         }
         return s-b;
