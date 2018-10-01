@@ -6,16 +6,7 @@
         {
             "label": "compile",
             "type": "shell",
-            "command": "clang++",
-            //-g -O2 -Wall -Wextra -Isrc -rdynamic -DNDEBUG
-            "args": [
-                "-g",
-                "-O2",
-                "-Wall",
-                "-std=c++11",
-                "-stdlib=libc++",
-                "${file}"
-            ],
+            "command": "clang++ -g -Wall -std=c++11 -stdlib=libc++ ${file} && ./a.out",
             "group": {
                 "kind": "build",
                 "isDefault": true
