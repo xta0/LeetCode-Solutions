@@ -8,42 +8,30 @@ struct ListNode
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-class Solution{
+class Solution {
 public:
-    ListNode *removeNthFromEnd(ListNode *head, int n){
-        //length of the list
-        int len = 0;
-        ListNode *pos = head;
-        ListNode *prev = head;
-        while (pos){
-            pos = pos->next;
-            len++;
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode* p = head;
+        ListNode* runner = head;
+        int count = 0;
+        while(p->next){
+            p = p->next;
+            count ++;
+            if(count > n){
+                runner = runner->next;
+            }
         }
-        ListNode *node_to_be_deleted = NULL;
-        int prev_index = len - n;
-        if(prev_index < 0){
-            return NULL;
-        }else if (prev_index == 0){
-            //delete head node
-            head = head->next;
+        if(count + 1 == n){
+            //remove head
+            return head->next;
+        }else if(count+1 < n){
             return head;
         }else{
-            //find prev_node
-            int count = 1;
-            while(count < prev_index){
-                prev = prev->next;
-                count++;
-            }
-            node_to_be_deleted = prev->next;
-            if(node_to_be_deleted == NULL){
-                //delete tail node
-                prev->next = NULL;
-            }else{
-                prev->next = node_to_be_deleted->next;
-            }
+            ListNode* tmp = runner->next->next;
+            runner->next = tmp;
             return head;
         }
-    };
+    }
 };
 
 int main()
