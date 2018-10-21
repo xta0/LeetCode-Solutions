@@ -4,57 +4,58 @@
 using namespace std;
 
 //O(n)
-class Solution {
-public:
-    int search(vector<int>& nums, int target) {
-        if(nums.size() == 0){
-            return -1;
-        }
-        if(nums.size() == 1){
-            return target == nums[0] ? 0:-1;
-        }
-        //no pivot
-        if(nums[nums.size()-1] > nums[0]){
-            auto itor = find(nums.begin(), nums.end(), target);
-            if(itor != nums.end()){
-                return (int)(itor-nums.begin());
-            }else{
-                return -1;
+class Solution
+{
+  public:
+    int search(vector<int> &arr, int key)
+    {
+        int l = 0;
+        int r = arr.size() - 1;
+        while (l <= r)
+        {
+            int mid = (l + r) / 2;
+            if (arr[mid] == key)
+            {
+                return mid;
+            }
+            //开始二分查找，target 可能在mid左边，也可能在mid右边
+            else if (key < arr[mid])
+            {
+                //target 在mid右边的情况是 : 4 5 6 7(mid) 0(target) 1 2 3
+                if (key < arr[l] && arr[mid] >= arr[l])
+                {
+                    l = mid + 1;
+                }
+                else
+                {
+                    //target 在mid左边
+                    r = mid - 1;
+                }
+            }
+            else
+            {
+                //target > mid
+                //target 在mid左边的情况 8 9（target） 0(mid) 1 2
+                if (key > arr[r] && arr[mid] <= arr[r])
+                {
+                    r = mid - 1;
+                }
+                else
+                {
+                    l = mid + 1;
+                }
             }
         }
-        //has pivot
-        //1. find pivot index -- O(n)
-        int index = (int)nums.size()-1;
-        for(int i=0;i<nums.size();i++){
-            if(nums[i] == target){
-                return i;
-            }
-            if(nums[i+1] == target){
-                return i+1;
-            }
-            if(nums[i+1] < nums[i]){
-                index = i;
-                break;
-            }
-        }
-        
-        //2. search the right half of the array -- O(log(n))
-        auto itor = std::find(nums.begin()+index+1, nums.end(),target);
-        if(itor != nums.end()){
-            return (int)(itor - nums.begin());
-        }else{
-            return -1;
-        }
+        return -1;
     }
 };
 
-int main(){
-    
-    vector<int> v = {1,3};
+int main()
+{
+
+    vector<int> v = {1, 3};
     Solution s;
     s.search(v, 1);
-    
-    
-    
+
     return 0;
 }
