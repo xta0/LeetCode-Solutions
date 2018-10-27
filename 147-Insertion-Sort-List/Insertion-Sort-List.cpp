@@ -7,26 +7,38 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
+//O(n^2)
 class Solution {
-private:
-    ListNode* moveto(ListNode* head, int n ){
-        
-    }
 public:
     ListNode* insertionSortList(ListNode* head) {
-        int len = 0;
-        ListNode* p = head;
-        while(p){
-            len ++;
-            p = p->next;
+        if(!head){
+            return nullptr;
         }
-        p = head;
-        for(int i =1; i<len; ++i){
-            
+         ListNode* root = new ListNode(head->val);
+        head = head->next;
+        while(head){
+            int data = head->val;
+            ListNode* node = new ListNode(data);
+            if(data < root->val){
+                node->next = root;
+                root = node;
+            }else{
+                ListNode* tmp = root;
+                while(tmp->next && data>tmp->next->val){
+                    tmp = tmp->next;
+                }
+                if(!tmp->next){
+                    tmp -> next = node;
+                }else{
+                    ListNode* next = tmp->next ;
+                    tmp->next = node;
+                    node->next = next;
+                }
+            }
+            head=head->next;
         }
-
-
-        return head;
+        
+        return root;
     }
 };
 

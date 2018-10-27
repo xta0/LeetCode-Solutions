@@ -12,15 +12,22 @@ struct TreeNode{
 
 //中序遍历验证
 class Solution {
-    void dfs(TreeNode* root, vector<int>& arr){
+public:
+    void dfs(TreeNode* root, TreeNode* &last, bool& result){
         if(!root){
             return;
         }
-        dfs(root->left,arr);
-        arr.push_back(root->val);
-        dfs(root->right,arr);
+        if(!result){
+            return;
+        }
+        dfs(root->left,last,result);
+        if(last && root->val <= last->val){
+            result = false;
+            return;
+        }
+        last = root;
+        dfs(root->right,last,result);
     }
-public:
     bool isValidBST(TreeNode* root) {
         if(!root){
             return true;
@@ -28,31 +35,24 @@ public:
         if(!root->left && !root->right){
             return true;
         }
-        vector<int> vec;
-        dfs(root,vec);
-        bool b = true;
-        for(int i=0;i<vec.size();i++){
-            if(i > 0){
-                if(vec[i] <= vec[i-1]){
-                    b = false;
-                    break;
-                }
-            }
-        }
-        return b;
+        bool result = true;
+        TreeNode* last= nullptr;
+        dfs(root,last,result);
+        return result;
     }
-};  
+};
+
 
 int main(){
-
+    
     TreeNode* root = new TreeNode(10);
-    root->left = new TreeNode(5);
-    root->right = new TreeNode(15);
-    root->right->left = new TreeNode(6);
-    root->right->right = new TreeNode(20);
+    root->left = new TreeNode(10);
+//    root->right = new TreeNode(15);
+//    root->right->left = new TreeNode(6);
+//    root->right->right = new TreeNode(20);
     Solution s;
     cout<<s.isValidBST(root)<<endl;
-
-
+    
+    
     return 0;
 }

@@ -5,37 +5,41 @@
 #include <set>
 
 using namespace std;
-//K-Sum问题：双指针+滑动窗口
-//Slide-Windown
+//sort + 双指针
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
-        vector<vector<int>> ret;
+        vector<vector<int>> ans;
         std::sort(nums.begin(), nums.end());
-        for(int i = 0; i<nums.size(); ++i){
-            if(i==0 || nums[i] != nums[i-1]){
-                int n = nums[i];
-                int left = i+1;
-                int right = (int)nums.size()-1;
-                //two sum
-                while(left < right){
-                    int total = n+nums[left] + nums[right];
-                    if(total == 0){
-                        vector<int>vec{n,nums[left],nums[right]};
-                        ret.push_back(vec);
-                        //略过重复元素
-                        do{++left;}while(nums[left] == nums[left-1] && left<right);
-                        do{--right;}while(nums[right] == nums[right+1] && left<right);
-                        
-                    }else if(total > 0){
-                        right--;
-                    }else{
-                        left++;
+        for(int i = 0; i<nums.size(); i++){
+            int l = i+1;
+            int r = nums.size()-1;
+            while(l<r){
+                if(nums[i] + nums[l] + nums[r] < 0){
+                    l++;
+                }else if(nums[i] + nums[l] + nums[r] > 0){
+                    r--;
+                }else{
+                    //=0
+                    ans.push_back({nums[i],nums[l],nums[r]});
+                    //skip duplicated elements
+                    while(nums[l] == nums[l+1] && l<r){
+                        l++;
                     }
+                    //skip duplicated elements
+                    while(nums[r] == nums[r-1] && l<r){
+                        r--;
+                    }
+                    l++;
+                    r--;
                 }
             }
+            while(nums[i] == nums[i+1]){
+                i++;
+            }
         }
-        return ret;
+
+        return ans;
     }
 };
 int main(){
