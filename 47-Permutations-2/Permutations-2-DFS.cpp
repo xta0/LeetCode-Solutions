@@ -1,5 +1,6 @@
 #include <iostream>
-#include <algorithm>
+#include <set>
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
@@ -12,13 +13,13 @@ private:
             results.push_back(chosen);
         }else{
             //每一层用一个数组记录已经遍历的数字
-            vector<int> visited;
+            unordered_set<int> visited;
             for(int i = 0; i<nums.size(); ++i){
                 int n = nums[i];
-                if(find(visited.begin(),visited.end(),n) != visited.end()){
+                if(visited.find(n) != visited.end()){
                     continue;
                 }
-                visited.push_back(n);
+                visited.insert(n);
                 chosen.push_back(n);
                 nums.erase(nums.begin()+i);
                 dfs(nums,chosen,results);
