@@ -32,6 +32,9 @@ Solutions are based on C++.
 - [x] 784. Letter Case Permutation
 - [] 791. Custom Sort String
 
+## Amazon
+
+- [x] 53. Maximum Subarray
 
 
 
