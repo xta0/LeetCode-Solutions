@@ -1,6 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <map>
+#include <set>
+#include <unordered_map>
 using namespace std;
 
 class Solution {
@@ -50,8 +53,6 @@ int main(){
     Solution s;
     vector<int> A = {1,2,3,8,9,10};
     cout<<s.numberOfArithmeticSlices(A)<<endl;;
-    
-    
-    
+
     return 0;
 }
