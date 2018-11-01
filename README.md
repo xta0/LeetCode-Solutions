@@ -4,6 +4,7 @@ Solutions are based on C++.
 
 - [] 29.Divide Two Integers x2
 - [] 34. Find First and Last Position of Element in Sorted Array
+- [x] 56. Merge Intervals
 - [x] 67. Add Binary
 - [] 91.Decode Ways
 - [x] 124. Binary Tree Maximum Path Sum x3
@@ -16,11 +17,13 @@ Solutions are based on C++.
 - [x] 257. Binary Tree Paths
 - [] 269. Alien Dictionary x3
 - [] 273.Integer to English Words
+- [] 277. Find the Celebrity
 - [] 282. Expression Add Operators
 - [x] 283. Move Zeroes
+- [] 297. Serialize and Deserialize Binary Tree
 - [] 301. Remove Invalid Parentheses
 - [] 304.Range Sum Query 2D 1. Immutable
-- [] 314. Binary Tree Vertical Order Traversal
+- [x] 314. Binary Tree Vertical Order Traversal
 - [] 341. Flatten Nested List Iterator
 - [x] 413. Arithmetic Slices
 - [] 426. Convert Binary Search Tree to Sorted Doubly Linked List x2
@@ -35,6 +38,7 @@ Solutions are based on C++.
 ## Amazon
 
 - [x] 53. Maximum Subarray
+- [x] 238. Product of Array Except Self
 
 
 
