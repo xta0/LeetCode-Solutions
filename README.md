@@ -38,8 +38,13 @@ Solutions are based on C++.
 ## Amazon
 
 - [x] 53. Maximum Subarray
-- [x] 238. Product of Array Except Self
-
+- [x] 75. Sort Colors
+- [] 301.
+- [] 139. Word Break
+- [] Word Beak 2
+- [] 238. Product of Array Except Self
+- [] 675. 
+- [] 678. Valid Parenthesis String
 
 
 
