@@ -4,6 +4,7 @@ Solutions are based on C++.
 
 - [] 29.Divide Two Integers x2
 - [] 34. Find First and Last Position of Element in Sorted Array
+- [] 54. Spirail Matrix
 - [x] 56. Merge Intervals
 - [x] 67. Add Binary
 - [] 91.Decode Ways
@@ -18,6 +19,7 @@ Solutions are based on C++.
 - [] 269. Alien Dictionary x3
 - [] 273.Integer to English Words
 - [] 277. Find the Celebrity
+- [] 278. First Bad Version
 - [] 282. Expression Add Operators
 - [x] 283. Move Zeroes
 - [] 297. Serialize and Deserialize Binary Tree

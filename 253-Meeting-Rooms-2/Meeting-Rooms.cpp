@@ -3,6 +3,7 @@
 #include <string>
 #include <map>
 #include <set>
+#include <queue>
 #include <unordered_map>
 using namespace std;
 
@@ -20,21 +21,7 @@ public:
         auto func = [](const Interval& i1, const Interval& i2){
             return i1.start < i2.start;
         }; 
-        auto hasInterval = [](const Interval& i1, const Interval& i2){
-            return i1.end>i2.start;
-        };
-
-        int count = 1;
-        Interval curr = intervals[0];
-        int i = 1;
-        while(i<intervals.size()){
-            if(hasInterval(curr,intervals[i])){
-                count++;
-            }
-            curr = intervals[i];
-            i++;
-        }
-        return count;
+        
     }
 };
 
