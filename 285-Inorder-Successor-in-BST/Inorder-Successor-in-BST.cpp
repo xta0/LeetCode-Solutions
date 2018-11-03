@@ -1,64 +1,62 @@
-    #include <iostream>
-#include <vector>
+#include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
-struct TreeNode{
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
 
+
+ 
+  struct TreeNode {
+      int val;
+      TreeNode *left;
+      TreeNode *right;
+     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+  };
 
 class Solution {
 public:
-    TreeNode* dfs(TreeNode* root, TreeNode* p, bool& flag){
+    //dfs search
+    void dfs(TreeNode* root, TreeNode* p, TreeNode* &successor, bool& b){
         if(!root){
-            return NULL;
+            return;
         }
-        auto pl =  dfs(root->left,p,flag);
-        if(pl){
-            return pl;
-        }else{
-            if(flag){
-                return root;
-            }else{
-                if(p->val==root->val){
-                    flag = true;
-                }
+        dfs(root->left,p,successor,b);
+        if(b){
+            if(!successor){
+                successor = root;
             }
+            return ;
         }
-        auto pr = dfs(root->right,p,flag);
-        if(pr){
-            return pr;
-        }else{
-            return NULL;
+        if(root->val == p->val){
+            b = true;
         }
+        dfs(root->right,p,successor,b);
+    
     }
     TreeNode* inorderSuccessor(TreeNode* root, TreeNode* p) {
-        bool flag = false;
-        return dfs(root,p,flag);
-    };
+        if(!root || !p){
+            return nullptr;
+        }
+        
+        TreeNode* successor = nullptr;
+        bool b = false;
+        dfs(root,p,successor,b);
+        
+        return successor;
+    }
 };
 
 int main(){
-    
-    TreeNode* root = new TreeNode(5);
-    root->left = new TreeNode(3);
-    root->right = new TreeNode(6);
-    root->left->left = new TreeNode(2);
-    root->left->right = new TreeNode(4);
-    root->left->left->left = new TreeNode(1);
-    
     Solution s;
-    TreeNode* p = new TreeNode(4);
-    TreeNode* r = s.inorderSuccessor(root,p);
-    if(r){
-        cout<<r->val<<endl;
-    }else{
-        cout<<"NULL"<<endl;
-    }
-    // cout<<s.kthSmallest(root, 1)<<endl;
-    
+    TreeNode* root = new TreeNode(2);
+//    root->left = new TreeNode(3);
+    root->right = new TreeNode(3);
+    cout<<s.inorderSuccessor(root, new TreeNode(2))->val<<endl;
+//    TreeNode* root = new TreeNode(5);
+//    root->left = new TreeNode(3);
+//    root->right = new TreeNode(6);
+//    root->left->left = new TreeNode(2);
+//    root->left->right = new TreeNode(4);
+//    root->left->left->left = new TreeNode(1);
+//    cout<<s.inorderSuccessor(root, new TreeNode(1))->val<<endl;
     return 0;
 }
