@@ -40,18 +40,23 @@ Solutions are based on C++.
 
 ## Amazon
 
-- []Find the Duplicate Number
 - [x] 53. Maximum Subarray
 - [x] 75. Sort Colors
 - [x] 139. Word Break
 - [] Word Beak 2
-- [] 287. Find the Duplicate Number
-- [] 301. Remove Invalid Parentheses
+- [x] 287. Find the Duplicate Number
+- [x] 301. Remove Invalid Parentheses
 - [x] 238. Product of Array Except Self
 - [x] 348. Design Tic-Tac-Toe
 - [] 442. Find All Duplicates in an Array 
 - [] 675. Cut Off Trees for Golf Event
-- [] 678. Valid Parenthesis String
+- [x] 678. Valid Parenthesis String
+- regular expression
+- expression evaluation
+- bst inorder traversal
+- clone graph
+- flattern linkedlist
+- minimum window substring
 
 
 
