@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <stack>
+#include <set>
 
 using namespace std;
 
@@ -12,18 +12,16 @@ public:
             return {"()"};
         }else {
             vector<string> last = generateParenthesis(n-1);
-            vector<string> ret;
+            set<string> ret;
             for(auto str : last){
                 string tmp;
                 for(int i=0;i<=str.length();++i){
                     tmp = str;
                     string s = tmp.insert(i, "()");
-                    ret.push_back(s);
+                    ret.insert(s);
                 }
-            }
-            std::sort(ret.begin(), ret.end());
-            ret.erase(std::unique(ret.begin(), ret.end()), ret.end());
-            return ret;
+            } 
+            return {ret.begin(),ret.end()};
         }  
     }
 };

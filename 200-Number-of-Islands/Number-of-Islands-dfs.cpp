@@ -5,57 +5,47 @@ using namespace std;
 
 class Solution {
 public:
-    void dfs(int i,int j, int w, int h,  vector<vector<int>>& grids, vector<vector<bool>>& marks,int& count){
-        if(marks[i][j] == true){
+    void dfs(int i, int j, int w, int h, vector<vector<char>>& grid, vector<vector<bool>>& marks){
+        if(grid[i][j] == '0'){
             return;
         }
+        if(marks[i][j] == true){
+            return ;
+        }
         marks[i][j] = true;
-        count ++;
-        
-        //right,east
-        if(j+1 < w && grids[i][j+1] == 1){
-            dfs(i,j+1,w,h,grids,marks,count);
+        //dfs
+        if(j+1 < w){
+            dfs(i,j+1,w,h,grid,marks);
         }
-        //bottom
-        if(i+1<h && grids[i+1][j]== 1){
-            dfs(i+1,j,w,h,grids,marks,count);
+        if(i+1 < h){
+            dfs(i+1,j,w,h,grid,marks);
         }
-        //left
-        if(j-1 >= 0 && grids[i][j-1]== 1){
-            dfs(i,j-1,w,h,grids,marks,count);
+        if(j-1 >= 0){
+            dfs(i,j-1,w,h,grid,marks);
         }
-        //up
-        if(i-1>=0 && grids[i-1][j] == 1){
-            dfs(i-1,j,w,h,grids,marks,count);
+        if(i-1>=0){
+            dfs(i-1,j,w,h,grid,marks);
         }
-        
     }
-    int maxAreaOfIsland(vector<vector<int>>& grid) {
-        int h = (int)grid.size();
+    int numIslands(vector<vector<char>>& grid) {
+        int h = grid.size();
         if(!h) return 0;
-        int w = (int)grid[0].size();
+        int w = grid[0].size();
         if(!w) return 0;
+        vector<vector<bool>> marks = vector<vector<bool>>(h,vector<bool>(w,false));
         int count = 0;
-        vector<vector<bool>> marks(h,vector<bool>(w,false));
         for(int i=0;i<h;i++){
             for(int j=0;j<w;j++){
-                if(grid[i][j] == 1 && marks[i][j] == false){
-                    int n = 0;
-                    dfs(i,j,w,h,grid,marks,n);
-                    count = max(count,n);
+                if(grid[i][j] == '1' && marks[i][j] == false){
+                    dfs(i,j,w,h,grid,marks);
+                    count ++;
                 }
             }
         }
         return count;
     }
 };
-
 int main(){
-    
-    vector<vector<int>> grids = {{1,1,0,0,0},{1,1,0,0,0},{0,0,0,1,1},{0,0,0,1,1}};
-    Solution s;
-    cout<<s.maxAreaOfIsland(grids)<<endl;;
-    
     
     return 0;
 }

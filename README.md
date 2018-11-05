@@ -22,7 +22,7 @@ Solutions are based on C++.
 - [] 278. First Bad Version
 - [] 282. Expression Add Operators
 - [x] 283. Move Zeroes
-- [] 297. Serialize and Deserialize Binary Tree
+- [x] 297. Serialize and Deserialize Binary Tree
 - [] 301. Remove Invalid Parentheses
 - [] 304.Range Sum Query 2D 1. Immutable
 - [x] 314. Binary Tree Vertical Order Traversal
@@ -36,17 +36,21 @@ Solutions are based on C++.
 - [x] 674. Longest Continuous Increasing Subsequence x2
 - [x] 784. Letter Case Permutation
 - [] 791. Custom Sort String
+- [] 921. 
 
 ## Amazon
 
+- []Find the Duplicate Number
 - [x] 53. Maximum Subarray
 - [x] 75. Sort Colors
-- [] 301.
-- [] 139. Word Break
+- [x] 139. Word Break
 - [] Word Beak 2
-- [] 238. Product of Array Except Self
-- [x] tic-tac-toe
-- [] 675. 
+- [] 287. Find the Duplicate Number
+- [] 301. Remove Invalid Parentheses
+- [x] 238. Product of Array Except Self
+- [x] 348. Design Tic-Tac-Toe
+- [] 442. Find All Duplicates in an Array 
+- [] 675. Cut Off Trees for Golf Event
 - [] 678. Valid Parenthesis String
 
 
