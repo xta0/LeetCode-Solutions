@@ -7,7 +7,7 @@ Solutions are based on C++.
 - [] 54. Spirail Matrix
 - [x] 56. Merge Intervals
 - [x] 67. Add Binary
-- [] 91.Decode Ways
+- [x] 91.Decode Ways
 - [x] 124. Binary Tree Maximum Path Sum x3
 - [] 133. Clone Graph
 - [] 138.Copy List with Random Pointer x2
@@ -29,7 +29,7 @@ Solutions are based on C++.
 - [] 341. Flatten Nested List Iterator
 - [x] 413. Arithmetic Slices
 - [] 426. Convert Binary Search Tree to Sorted Doubly Linked List x2
-- [] 442. Find All Duplicates in an Array
+- [x] 442. Find All Duplicates in an Array
 - [] 491. Increasing Subsequences
 - [] 560. Subarray Sum Equals K
 - [] 689. Maximum Sum of 3 Non-Overlapping Subarrays
@@ -48,7 +48,7 @@ Solutions are based on C++.
 - [x] 301. Remove Invalid Parentheses
 - [x] 238. Product of Array Except Self
 - [x] 348. Design Tic-Tac-Toe
-- [] 442. Find All Duplicates in an Array 
+- [x] 442. Find All Duplicates in an Array 
 - [] 675. Cut Off Trees for Golf Event
 - [x] 678. Valid Parenthesis String
 - regular expression
