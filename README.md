@@ -42,6 +42,7 @@ Solutions are based on C++.
 
 - [x] 53. Maximum Subarray
 - [x] 75. Sort Colors
+- [] 84. Largest Rectangle in Histogram
 - [x] 139. Word Break
 - [] Word Beak 2
 - [x] 287. Find the Duplicate Number

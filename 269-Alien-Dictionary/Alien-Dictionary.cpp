@@ -23,6 +23,7 @@ public:
         //保存出·度为0的节点
         
     }
+    void constructGraph(vector<string>& words, )
 };
 int main(){
 
