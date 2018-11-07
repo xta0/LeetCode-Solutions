@@ -21,7 +21,7 @@ Solutions are based on C++.
 - [x] 257. Binary Tree Paths
 - [] 269. Alien Dictionary x3
 - [] 273.Integer to English Words
-- [] 277. Find the Celebrity
+- [x] 277. Find the Celebrity
 - [] 278. First Bad Version
 - [] 282. Expression Add Operators
 - [x] 283. Move Zeroes
