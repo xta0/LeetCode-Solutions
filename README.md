@@ -30,7 +30,7 @@ Solutions are based on C++.
 - [] 301. Remove Invalid Parentheses
 - [] 304.Range Sum Query 2D 1. Immutable
 - [x] 314. Binary Tree Vertical Order Traversal
-- [] 341. Flatten Nested List Iterator
+- [x] 341. Flatten Nested List Iterator
 - [x] 413. Arithmetic Slices
 - [] **426. Convert Binary Search Tree to Sorted Doubly Linked List x3**
 - [x] 442. Find All Duplicates in an Array
@@ -66,7 +66,6 @@ Solutions are based on C++.
 - expression evaluation
 - bst inorder traversal
 
-- flattern linkedlist
 - minimum window substring
 - histogram
 
