@@ -13,27 +13,32 @@ private:
     }
 public:
     string minWindow(string s, string t) {
-        map<char,int> orig;
+        //统计模式串的词频
+        map<char,int> dict;
         for(auto c:t){
-            orig[c] ++ ;
+            dict[c] ++ ;
         }
-        map<char,int> dict(orig);
-        int count = t.size();
-        int len = s.size();
-        int l=0;int r=0;
-        while( r < s.size() ){
-            char c = s[r];
-            if(dict.count(c) && count > 0){
-                if(dict[c] > 0){
-                    dict[c] --;
-                    count --;
-                    if(count == 0){
+        int counter = dict.size();
+        int left=0;int right=0;
 
-                    }
+        int len = INT_MAX;
+        while(right < s.size()){
+            char c= s[right];
+            if(dict.count(c)){
+                dict[c]--;
+                if(dict[c] == 0){
+                    counter --;
                 }
             }
+            right++;
+            while(counter == 0){
+                char c = s[left];
+                if(dict.count(c)){
+                    dict[c]++;
+                }
+            }
+
         }
-        return s.substr(l,r-l);
     }
 };
 

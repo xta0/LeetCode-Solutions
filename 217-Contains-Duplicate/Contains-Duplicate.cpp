@@ -9,10 +9,17 @@ public:
         if(nums.empty()){
             return false;
         }
-        
+        set<int> sets;
+        for(auto x: nums){
+            if(sets.find(x) != sets.end()){
+                return true;
+            }
+            sets.insert(x);
+        }
+        return false;
+    
     }
 };
-
 int main(){
 
 

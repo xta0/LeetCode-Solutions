@@ -21,9 +21,15 @@ public:
         //构建图
         unordered_map<string, unordered_set<string>> graph;
         //保存出·度为0的节点
+        vector<int> degrees;
+        
         
     }
-    void constructGraph(vector<string>& words, )
+    void constructGraph(vector<string>& words, unordered_map<string,unordered_set<string>>& graph){
+        for(int i=0;i<words.size();i++){
+            
+        }
+    }
 };
 int main(){
 
