@@ -10,10 +10,11 @@ using namespace std;
 class Solution {
 public:
     vector<string> generateParenthesis(int n) {
-        vector<string> ans;
-        int left = 0;
-        int right = 0;
         
+        
+    }
+    void dfs(int n, int lp, int rp, string& chosen, vector<string>& result){
+
     }
 };
 

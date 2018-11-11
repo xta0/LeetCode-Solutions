@@ -14,7 +14,11 @@ Solutions are based on C++.
 - [x] 133. Clone Graph
 - [] 138.Copy List with Random Pointer x3
 - [x] **139. Word Break**
+- [] 143 Reorder List x2
+- [] 157. Read N Characters Given Read4
+- [] 158. Read N Characters Given Read4 II
 - [x] 200. Number of Islands
+- [] 227. Basic Calculator II
 - [x] 215. Kth Largest Element in an Array
 - [x] 251. Flatten 2D Vector
 - [x] 253. Meeting Rooms II
@@ -34,42 +38,17 @@ Solutions are based on C++.
 - [x] 413. Arithmetic Slices
 - [] **426. Convert Binary Search Tree to Sorted Doubly Linked List x3**
 - [x] 442. Find All Duplicates in an Array
+- [] 480. 
 - [] 491. Increasing Subsequences
-- [] 554
+- [] 554. Brick Wall
 - [] 560. Subarray Sum Equals K
+- [] 621. Task Scheduler
 - [] 689. Maximum Sum of 3 Non-Overlapping Subarrays
 - [x] 674. Longest Continuous Increasing Subsequence x2
+- [] 703. Kth Largest Element in a Stream
 - [x] 784. Letter Case Permutation
 - [] 791. Custom Sort String
 - [] 921. 
-
-
-
-
-
-
-## Amazon
-
-- [x] 53. Maximum Subarray
-- [x] 75. Sort Colors
-- [] 84. Largest Rectangle in Histogram
-- [x] 139. Word Break
-- [] Word Beak 2
-- [x] 287. Find the Duplicate Number
-- [x] 301. Remove Invalid Parentheses
-- [x] 238. Product of Array Except Self
-- [x] 348. Design Tic-Tac-Toe
-- [x] 442. Find All Duplicates in an Array 
-- [] 675. Cut Off Trees for Golf Event
-- [x] 678. Valid Parenthesis String
-- regular expression
-- expression evaluation
-- bst inorder traversal
-
-- minimum window substring
-- histogram
-
-
 
 
 
