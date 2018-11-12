@@ -20,7 +20,17 @@ public:
      * @return    The number of characters read
      */
     int read(char *buf, int n) {
-        
+
+        int ans = 0;int lastRead=0;
+        while(true){
+            lastRead = read4(buf);
+            ans+=lastRead;
+            if(lastRead < 4){
+                break;
+            }
+            buf+=4;
+        }
+        return min(ans,n);
     }
 };
 

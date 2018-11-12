@@ -15,7 +15,7 @@ Solutions are based on C++.
 - [] 138.Copy List with Random Pointer x3
 - [x] **139. Word Break**
 - [] 143 Reorder List x2
-- [] 157. Read N Characters Given Read4
+- [x] 157. Read N Characters Given Read4
 - [] 158. Read N Characters Given Read4 II
 - [x] 200. Number of Islands
 - [] 227. Basic Calculator II
