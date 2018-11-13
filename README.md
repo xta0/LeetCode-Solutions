@@ -12,7 +12,7 @@ Solutions are based on C++.
 - [x] 91.Decode Ways
 - [x] 124. Binary Tree Maximum Path Sum x3
 - [x] 133. Clone Graph
-- [] 138.Copy List with Random Pointer x3
+- [x] 138.Copy List with Random Pointer x3
 - [x] **139. Word Break**
 - [x] 200. Number of Islands
 - [x] 215. Kth Largest Element in an Array
