@@ -10,26 +10,13 @@ using namespace std;
 class Solution {
 public:
     bool isMatch(string s, string p) {
-        if(s.empty() && p.empty()){
+        return match(s,p,0,0);
+    }
+    bool match(const string& s, const string& p, int i, int j){
+        if(i==s.size()-1 && j==p.size()-1){
             return true;
-        }
-        if(s.empty() || p.empty()){
-            return false;
-        }
-        //x*
-        if(p.size() > 1 && p[1] == '*' ){
-            string remaining_pattern = 
-        }
-        if(p[0] == '.' ){
-            return isMatch(s.substr(1),p.substr(1));
-        }
-        if(p[0] != '.' && p[0] != '*'){
-            if(s[0] != p[0]){
-                return false;
-            }else{
-                return isMatch(s.substr(1),p.substr(1));
-            }
-        }
+        }else if()
+
     }
 };
 

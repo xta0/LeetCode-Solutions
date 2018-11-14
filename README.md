@@ -7,6 +7,7 @@ Solutions are based on C++.
 - [] 31. Next Permutation
 - [] 34. Find First and Last Position of Element in Sorted Array
 - [x] **50. pow**
+- [x] 51. N-Queens
 - [] 54. Spirail Matrix
 - [x] 56. Merge Intervals
 - [x] 67. Add Binary
