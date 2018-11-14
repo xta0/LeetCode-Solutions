@@ -3,7 +3,10 @@ Solutions are based on C++.
 ### FB
 
 - [] 10. Regular Expression
-- [x] 29.Divide Two Integers x2
+- [] 17. Letter Combinations of a Phone Number
+- [] 21. Merge Two Sorted Lists 
+- [] 23. Merge K Sorted Lists 
+- [x] 29.Divide Two Integers x3
 - [] 31. Next Permutation
 - [] 34. Find First and Last Position of Element in Sorted Array
 - [x] **50. pow**
@@ -14,7 +17,7 @@ Solutions are based on C++.
 - [x] 88. Merge Sorted Array
 - [x] 91.Decode Ways
 - [x] 124. Binary Tree Maximum Path Sum x3
-- [x] 133. Clone Graph
+- [x] 133. Clone Graph x2
 - [x] 138.Copy List with Random Pointer x3
 - [x] **139. Word Break**
 - [] 143 Reorder List x2
@@ -25,7 +28,7 @@ Solutions are based on C++.
 - [x] 238. Product of Array Except Self  
 - [x] 215. Kth Largest Element in an Array
 - [x] 251. Flatten 2D Vector
-- [x] 253. Meeting Rooms II
+- [x] 253. Meeting Rooms II x2
 - [x] 257. Binary Tree Paths
 - [] 269. Alien Dictionary x3
 - [x] 273.Integer to English Words
@@ -38,21 +41,23 @@ Solutions are based on C++.
 - [x] 301. Remove Invalid Parentheses x3
 - [] 304.Range Sum Query 2D 1. Immutable
 - [x] 314. Binary Tree Vertical Order Traversal
-- [] 336. Palindrome Pairs
+- [x] 336. Palindrome Pairs
 - [x] 341. Flatten Nested List Iterator
+- [x] 350. Intersection of Two Arrays II
 - [x] 413. Arithmetic Slices
-- [] **426. Convert Binary Search Tree to Sorted Doubly Linked List x3**
+- [] **426. Convert Binary Search Tree to Sorted Doubly Linked List x4**
 - [x] 442. Find All Duplicates in an Array
 - [] 480. Sliding Window Median
 - [] 491. Increasing Subsequences
 - [] 543. Diameter of Binary Tree
 - [] 554. Brick Wall
-- [] 560. Subarray Sum Equals K x2
+- [] 560. Subarray Sum Equals K x3
 - [x] 621. Task Scheduler x2
 - [] 689. Maximum Sum of 3 Non-Overlapping Subarrays
 - [x] 674. Longest Continuous Increasing Subsequence x2
 - [x] 703. Kth Largest Element in a Stream
 - [x] 784. Letter Case Permutation
+- [] 844. Backspace String Compare
 - [] 791. Custom Sort String
 - [] 921. Minimum Add to Make Parentheses Valid
 

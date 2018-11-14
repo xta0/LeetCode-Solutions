@@ -12,33 +12,21 @@ struct TreeNode {
 };
 
 class Solution {
-private:
-    void dfs(TreeNode* root, int& depth, int& max_depth){
+public:
+    void dfs(TreeNode* root,int depth,int& maxd){
         if(!root){
             return;
         }
-        if(root->left){
-            depth ++;
-            max_depth = max(max_depth,depth);
-            dfs(root->left, depth,max_depth);
-            depth --;
-        }
-        if(root->right){
-            depth ++;
-            max_depth = max(max_depth,depth);
-            dfs(root->right,depth,max_depth);
-            depth--;
-        }
+        maxd = max(maxd,depth);
+        dfs(root->left,depth+1,maxd);
+        dfs(root->right,depth+1,maxd);
+        
     }
-public:
     int maxDepth(TreeNode* root) {
-        if(!root){
-            return 0;
-        }
-        int depth = 1;
-        int max_depth = 1;
-        dfs(root,depth,max_depth);
-        return max_depth;
+        int maxd = 0;
+        dfs(root,1,maxd);
+        return maxd;
+        
     }
 };
 
