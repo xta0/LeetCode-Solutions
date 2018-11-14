@@ -3,7 +3,7 @@ Solutions are based on C++.
 ### FB
 
 - [] 10. Regular Expression
-- [] 29.Divide Two Integers x2
+- [x] 29.Divide Two Integers x2
 - [] 31. Next Permutation
 - [] 34. Find First and Last Position of Element in Sorted Array
 - [x] **50. pow**
