@@ -44,7 +44,9 @@ public:
         long long result = 0;
         if(x < 0 && y < 0){
             result =  helper(-x,-y);
-        }else if( (x < 0 && y>0) || (x>0&&y<0) ){
+        }else if(x < 0 && y>0){
+            result = -helper(-x,y);
+        }else if(x >0 && y <0){
             result =  -helper(x,-y);
         }else{
             result =  helper(x,y);
