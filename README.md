@@ -23,6 +23,7 @@ Solutions are based on C++.
 - [] 143 Reorder List x2
 - [x] 157. Read N Characters Given Read4
 - [] 158. Read N Characters Given Read4 II
+- [] 161. One Edit Distance
 - [x] 200. Number of Islands
 - [] 227. Basic Calculator II
 - [x] 238. Product of Array Except Self  
