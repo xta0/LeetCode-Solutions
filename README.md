@@ -34,11 +34,11 @@ Solutions are based on C++.
 - [x] 273.Integer to English Words
 - [x] 277. Find the Celebrity
 - [x] 278. First Bad Version
-- [] 282. Expression Add Operators
+- [] 282. Expression Add Operators x2
 - [x] 283. Move Zeroes
 - [] **286. Walls and Gates**
 - [x] 297. Serialize and Deserialize Binary Tree
-- [x] 301. Remove Invalid Parentheses x3
+- [x] **301. Remove Invalid Parentheses x4**
 - [] 304.Range Sum Query 2D 1. Immutable
 - [x] 314. Binary Tree Vertical Order Traversal
 - [x] 336. Palindrome Pairs
@@ -57,9 +57,10 @@ Solutions are based on C++.
 - [x] 674. Longest Continuous Increasing Subsequence x2
 - [x] 703. Kth Largest Element in a Stream
 - [x] 784. Letter Case Permutation
-- [] 844. Backspace String Compare
 - [] 791. Custom Sort String
-- [] 921. Minimum Add to Make Parentheses Valid
+- [] 844. Backspace String Compare
+- [x] 865. Smallest Subtree with all the Deepest Nodes
+- [x] 921. Minimum Add to Make Parentheses Valid
 
 
 
