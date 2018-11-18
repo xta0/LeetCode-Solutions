@@ -1,12 +1,17 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <stack>
+#include <queue>
+#include <map>
+#include <set>
+#include <unordered_set>
 #include <unordered_map>
 using namespace std;
 
 class Solution {
 public:
-    int minSubArrayLen(int s, vector<int>& nums) {
+    int maxSubArrayLen(vector<int>& nums, int k) {
         vector<int> prefix;
         int sum = 0;
         for(int i=0;i<nums.size();i++){
@@ -17,10 +22,10 @@ public:
         unordered_map<int,int> um;
         for(int i=0; i<nums.size();i++){
             int prefixSum = prefix[i];
-            if(prefixSum >= s){
-                len = min(len, i+1);
+            if(prefixSum == k){
+                len = max(len, i+1);
             }
-            int target = prefixSum-s;
+            int target = prefixSum-k;
             if(um.count(target)){
                 int index = um[target];
                 len = max(len, i-index);
@@ -34,11 +39,12 @@ public:
         return len;
     }
 };
-
 int main(){
-
-
-
-
+    Solution s;
+    vector<int> nums = {1,0,-1};
+    cout<<s.maxSubArrayLen(nums,-1)<<endl;;
+    
+    
+    
     return 0;
 }
