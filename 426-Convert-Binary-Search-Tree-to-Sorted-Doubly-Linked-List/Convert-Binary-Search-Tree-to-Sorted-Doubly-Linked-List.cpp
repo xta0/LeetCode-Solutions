@@ -11,9 +11,19 @@ struct Node{
 };
     
 class Solution {
+    Node* subTree(){
+
+    }
 public:
     Node* treeToDoublyList(Node* root) {
-        
+        Node* left ;
+        Node* right;
+        root->left = left;
+        root->right = right;
+        left ->right = root;
+        right->left = root;
+        left ->left = right;
+        right->right = left;
     }
 };
 int main(){
