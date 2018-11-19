@@ -7,13 +7,13 @@ Solutions are based on C++.
 - [] 21. Merge Two Sorted Lists 
 - [] 23. Merge K Sorted Lists 
 - [x] 29.Divide Two Integers x3
-- [] 31. Next Permutation
+- [] **31. Next Permutation x2**
 - [] 34. Find First and Last Position of Element in Sorted Array
 - [x] **50. pow**
 - [x] 51. N-Queens
 - [] 54. Spirail Matrix
 - [x] 56. Merge Intervals
-- [x] 67. Add Binary
+- [x] 67. Add Binary x2
 - [x] 88. Merge Sorted Array
 - [x] 91.Decode Ways
 - [x] 124. Binary Tree Maximum Path Sum x3
@@ -31,7 +31,7 @@ Solutions are based on C++.
 - [x] 251. Flatten 2D Vector
 - [x] **253. Meeting Rooms II x4**
 - [x] 257. Binary Tree Paths
-- [] 269. Alien Dictionary x3
+- [] **269. Alien Dictionary x3**
 - [x] 273.Integer to English Words
 - [x] 277. Find the Celebrity
 - [x] 278. First Bad Version
@@ -39,7 +39,7 @@ Solutions are based on C++.
 - [x] 283. Move Zeroes
 - [] **286. Walls and Gates**
 - [x] 297. Serialize and Deserialize Binary Tree x2
-- [x] **301. Remove Invalid Parentheses x4**
+- [x] **301. Remove Invalid Parentheses x5**
 - [] 304.Range Sum Query 2D 1. Immutable
 - [x] 314. Binary Tree Vertical Order Traversal
 - [x] 336. Palindrome Pairs
@@ -50,6 +50,7 @@ Solutions are based on C++.
 - [x] 442. Find All Duplicates in an Array
 - [] 480. Sliding Window Median
 - [] 491. Increasing Subsequences
+- [] 494. Target Sum
 - [] 543. Diameter of Binary Tree
 - [] 554. Brick Wall
 - [x] **560. Subarray Sum Equals K x4**
