@@ -31,7 +31,7 @@ Solutions are based on C++.
 - [x] 251. Flatten 2D Vector
 - [x] **253. Meeting Rooms II x5**
 - [x] 257. Binary Tree Paths
-- [] **269. Alien Dictionary x3**
+- [x] **269. Alien Dictionary x3**
 - [x] 273.Integer to English Words
 - [x] 277. Find the Celebrity
 - [x] 278. First Bad Version
@@ -51,6 +51,7 @@ Solutions are based on C++.
 - [] 480. Sliding Window Median
 - [] 491. Increasing Subsequences
 - [] 494. Target Sum
+- [] 523. Continuous Subarray Sum
 - [] 543. Diameter of Binary Tree
 - [] 554. Brick Wall
 - [x] **560. Subarray Sum Equals K x4**
@@ -60,6 +61,7 @@ Solutions are based on C++.
 - [x] 703. Kth Largest Element in a Stream
 - [x] 784. Letter Case Permutation
 - [] 791. Custom Sort String
+- [] 825. Friends Of Appropriate Ages
 - [x] 844. Backspace String Compare
 - [x] 865. Smallest Subtree with all the Deepest Nodes
 - [x] 921. Minimum Add to Make Parentheses Valid
