@@ -9,8 +9,9 @@
 #include <unordered_map>
 using namespace std;
 
-//加减 + 括号的情况
-//括号使用stack
+/*
+use two stacks
+*/
 class Solution {
 public:
     int calculate(string s) {
