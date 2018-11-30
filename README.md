@@ -13,6 +13,7 @@ Solutions are based on C++.
 - [x] 51. N-Queens
 - [] 54. Spirail Matrix
 - [x] 56. Merge Intervals
+- [] 65. Valid Number
 - [x] 67. Add Binary x2
 - [x] 88. Merge Sorted Array
 - [x] 91.Decode Ways
@@ -54,7 +55,7 @@ Solutions are based on C++.
 - [] 523. Continuous Subarray Sum
 - [] 543. Diameter of Binary Tree
 - [] 554. Brick Wall
-- [x] **560. Subarray Sum Equals K x4**
+- [x] **560. Subarray Sum Equals K x5**
 - [x] 621. Task Scheduler x2
 - [] 689. Maximum Sum of 3 Non-Overlapping Subarrays
 - [x] 674. Longest Continuous Increasing Subsequence x2
@@ -70,7 +71,11 @@ Solutions are based on C++.
 
 
 
+## Snap
 
+- LRU x2
+- [x] 339. Nested List Weight Sum x2
+- [] 43
 
 
 
