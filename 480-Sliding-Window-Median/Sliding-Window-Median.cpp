@@ -9,30 +9,30 @@
 #include <unordered_map>
 using namespace std;
 
-//使用两个heap。思路同295
+//使用bst
 class Solution {
-    priority_queue<int> maxHeap;
-    priority_queue<int,std::vector<int>,greater<int>> minHeap;
-    
-    void addNumberToHeap(int n){
-        if(maxHeap.empty() || n<maxHeap.top()){
-            maxHeap.push(n);
-        }else{
-            minHeap.push(n);
-        }
-        if()
-    }
 public:
     vector<double> medianSlidingWindow(vector<int>& nums, int k) {
+        //bbst
+        multiset<int> ms(nums.begin(),nums.begin()+k);
+        //maintain a mid pointer
+        multiset<int>::iterator midItor = next(ms.begin(),(k-1)/2);
+
+        //move window
         
         
         
-    }
+        
+        
+        }
 };
 
 int main(){
 
-
+    multiset<int> ms{1,2,3};
+    for(auto x: ms){
+        cout<<x<<endl;
+    }
 
 
     return 0;
