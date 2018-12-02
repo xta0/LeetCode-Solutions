@@ -8,7 +8,7 @@ Solutions are based on C++.
 - [] 23. Merge K Sorted Lists 
 - [x] 29.Divide Two Integers x3
 - [] **31. Next Permutation x2**
-- [] 34. Find First and Last Position of Element in Sorted Array
+- [] **34. Find First and Last Position of Element in Sorted Array x2**
 - [x] **50. pow**
 - [x] 51. N-Queens
 - [] 54. Spirail Matrix
@@ -23,7 +23,7 @@ Solutions are based on C++.
 - [x] **139. Word Break**
 - [] 143 Reorder List x2
 - [x] 157. Read N Characters Given Read4
-- [] 158. Read N Characters Given Read4 II
+- [] **158. Read N Characters Given Read4 II x2**
 - [] 161. One Edit Distance
 - [x] 200. Number of Islands
 - [] 227. Basic Calculator II
