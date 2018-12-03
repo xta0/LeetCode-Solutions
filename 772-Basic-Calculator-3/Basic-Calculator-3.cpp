@@ -29,6 +29,8 @@ class Solution {
     int level (char c){
         if(c == '*' || c=='/'){
             return 1;
+        }else if(c=='('){
+            return -1;
         }
         return 0;
     }
@@ -116,6 +118,9 @@ public:
 int main(){
     Solution s;
     cout<<s.calculate("0-2147483648")<<endl;
-
+    
+    
+    
+    
     return 0;
 }
