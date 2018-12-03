@@ -2,6 +2,7 @@
 #include <vector>
 using namespace std;
 
+//brute force
 class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {

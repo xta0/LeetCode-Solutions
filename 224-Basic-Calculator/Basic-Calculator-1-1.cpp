@@ -29,6 +29,8 @@ class Solution {
     int level (char c){
         if(c == '*' || c=='/'){
             return 1;
+        }else if(c == '('){
+            return -1;
         }else{
             return 0;
         }
@@ -68,7 +70,7 @@ class Solution {
             }
         }
         //append the num
-        postfix.push_back(to_string(num));
+        // postfix.push_back(to_string(num));
 
         //collect the result
         while(!stk.empty()){
