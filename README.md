@@ -6,21 +6,21 @@ Solutions are based on C++.
 - [] 17. Letter Combinations of a Phone Number
 - [] 21. Merge Two Sorted Lists 
 - [] 23. Merge K Sorted Lists 
-- [x] 29.Divide Two Integers x3
+- [x] **29.Divide Two Integers x3**
 - [] **31. Next Permutation x2**
 - [] **34. Find First and Last Position of Element in Sorted Array x2**
 - [x] **50. pow**
 - [x] 51. N-Queens
 - [] 54. Spirail Matrix
 - [x] 56. Merge Intervals
-- [] 65. Valid Number
+- [] 65. Valid Number x2
 - [x] 67. Add Binary x2
 - [x] 88. Merge Sorted Array
 - [x] 91.Decode Ways
 - [x] 124. Binary Tree Maximum Path Sum x3
 - [x] 133. Clone Graph x2
 - [x] 138.Copy List with Random Pointer x3
-- [x] **139. Word Break**
+- [x] **139. Word Break x2**
 - [] 143 Reorder List x2
 - [x] 157. Read N Characters Given Read4
 - [] **158. Read N Characters Given Read4 II x2**
@@ -30,8 +30,8 @@ Solutions are based on C++.
 - [x] 238. Product of Array Except Self  
 - [x] 215. Kth Largest Element in an Array
 - [x] 251. Flatten 2D Vector
-- [x] **253. Meeting Rooms II x5**
-- [x] 257. Binary Tree Paths
+- [x] **253. Meeting Rooms II x6**
+- [x] 257. Binary Tree Paths x2
 - [x] **269. Alien Dictionary x3**
 - [x] 273.Integer to English Words
 - [x] 277. Find the Celebrity
@@ -39,7 +39,7 @@ Solutions are based on C++.
 - [] 282. Expression Add Operators x2
 - [x] 283. Move Zeroes
 - [] **286. Walls and Gates**
-- [x] 297. Serialize and Deserialize Binary Tree x2
+- [x] **297. Serialize and Deserialize Binary Tree x3**
 - [x] **301. Remove Invalid Parentheses x5**
 - [] 304.Range Sum Query 2D 1. Immutable
 - [x] 314. Binary Tree Vertical Order Traversal
@@ -47,7 +47,8 @@ Solutions are based on C++.
 - [x] 341. Flatten Nested List Iterator
 - [x] 350. Intersection of Two Arrays II
 - [x] 413. Arithmetic Slices
-- [] **426. Convert Binary Search Tree to Sorted Doubly Linked List x4**
+- [x] **426. Convert Binary Search Tree to Sorted Doubly Linked List x4**
+- [] 438. Find All Anagrams in a String
 - [x] 442. Find All Duplicates in an Array
 - [] 480. Sliding Window Median
 - [] 491. Increasing Subsequences
