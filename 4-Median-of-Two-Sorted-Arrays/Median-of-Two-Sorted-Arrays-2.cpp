@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <stack>
+#include <queue>
 #include <map>
 #include <set>
 #include <unordered_set>
@@ -9,7 +11,7 @@ using namespace std;
 
 class Solution {
 public:
-    int longestConsecutive(vector<int>& nums) {
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         
     }
 };
