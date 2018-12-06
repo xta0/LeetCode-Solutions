@@ -28,14 +28,15 @@ Solutions are based on C++.
 - [] 161. One Edit Distance
 - [x] 200. Number of Islands
 - [] 227. Basic Calculator II
+- [] 236. Lowest Common Ancestor
 - [x] 238. Product of Array Except Self  
 - [x] 215. Kth Largest Element in an Array
 - [x] 251. Flatten 2D Vector
-- [x] **253. Meeting Rooms II x6**
+- [x] **253. Meeting Rooms II x7**
 - [x] 257. Binary Tree Paths x2
 - [x] **269. Alien Dictionary x3**
 - [x] 273.Integer to English Words
-- [x] 277. Find the Celebrity
+- [x] **277. Find the Celebrityx2**
 - [x] 278. First Bad Version
 - [] 282. Expression Add Operators x2
 - [x] 283. Move Zeroes
@@ -67,6 +68,7 @@ Solutions are based on C++.
 - [] 825. Friends Of Appropriate Ages
 - [x] 844. Backspace String Compare
 - [x] 865. Smallest Subtree with all the Deepest Nodes
+- [] 894. All Possible Full Binary Trees
 - [x] 921. Minimum Add to Make Parentheses Valid
 
 
