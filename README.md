@@ -2,7 +2,7 @@ Solutions are based on C++.
 
 ### FB
 
-- [] 10. Regular Expression
+- [x] 10. Regular Expression
 - [] 17. Letter Combinations of a Phone Number
 - [] 21. Merge Two Sorted Lists 
 - [] 23. Merge K Sorted Lists 
@@ -29,7 +29,7 @@ Solutions are based on C++.
 - [x] 200. Number of Islands
 - [] 227. Basic Calculator II
 - [] 236. Lowest Common Ancestor
-- [x] 238. Product of Array Except Self  
+- [x] **238. Product of Array Except Self x3**
 - [x] 215. Kth Largest Element in an Array
 - [x] 251. Flatten 2D Vector
 - [x] **253. Meeting Rooms II x7**
@@ -49,7 +49,7 @@ Solutions are based on C++.
 - [x] 341. Flatten Nested List Iterator
 - [x] 350. Intersection of Two Arrays II
 - [x] 413. Arithmetic Slices
-- [x] **426. Convert Binary Search Tree to Sorted Doubly Linked List x4**
+- [x] **426. Convert Binary Search Tree to Sorted Doubly Linked List x5**
 - [] 438. Find All Anagrams in a String
 - [x] 442. Find All Duplicates in an Array
 - [] 480. Sliding Window Median
@@ -58,9 +58,10 @@ Solutions are based on C++.
 - [] 523. Continuous Subarray Sum
 - [] 543. Diameter of Binary Tree
 - [] 554. Brick Wall
-- [x] **560. Subarray Sum Equals K x5**
+- [x] **560. Subarray Sum Equals K x6**
 - [x] 621. Task Scheduler x2
 - [] 689. Maximum Sum of 3 Non-Overlapping Subarrays
+- [] 670. Maximum Swap
 - [x] 674. Longest Continuous Increasing Subsequence x2
 - [x] 703. Kth Largest Element in a Stream
 - [x] 784. Letter Case Permutation
