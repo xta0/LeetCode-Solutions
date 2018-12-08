@@ -17,23 +17,13 @@ using namespace std;
 class Solution {
 public:
     int minimumTotal(vector<vector<int>>& triangle) {
-        size_t h = triangle.size();
         vector<vector<int>> dp(triangle);
-        for(int i=1;i<h;i++){
+        for(int i=dp.size()-2;i>=0;i--){
             for(int j=0;j<dp[i].size();j++){
-                int lv = j-1>=0?dp[i-1][j-1]:INT_MAX;
-                int rv = j<dp[i-1].size() ? dp[i-1][j]:INT_MAX;
-                dp[i][j] += min(lv,rv);
+                dp[i][j] = min(dp[i+1][j],dp[i+1][j+1])+triangle[i][j];
             }
         }
-        int ans = INT_MAX;
-        for(int i=0;i<dp[h-1].size();i++){
-            if(dp[h-1][i]<ans){
-                ans = dp[h-1][i];
-            }
-        }
-        return ans;
-        
+        return dp[0][0];
     }
 };
 

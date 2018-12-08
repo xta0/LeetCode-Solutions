@@ -3,8 +3,8 @@
 #include <string>
 using namespace std;
 
-// Brutoal force
-// O(n^2)
+// Solution: Brute force
+// Time: O(n^2)
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {

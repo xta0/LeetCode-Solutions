@@ -3,8 +3,8 @@
 #include <string>
 using namespace std;
 
-// Sliding window
-// O(n)
+// Solution: Sliding window
+// Time: O(n)
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {

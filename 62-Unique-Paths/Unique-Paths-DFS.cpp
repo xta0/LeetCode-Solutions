@@ -1,47 +1,40 @@
 #include <iostream>
 #include <vector>
-#include <map>
+#include <unordered_map>
 using namespace std;
 
-//DFS+backtracking, 解法超时
+
+/*
+DFS solution
+Time Complexity: O(2^n) Timeout
+Space Complexity: O(1)
+*/
 class Solution {
+
+
 public:
     /*
-     m: m列，x轴， 1<=pt.first<=m
-     n: n行，y轴， 1<=pt.second<=n
-     pt: 当前坐标
-     target: 目的地
-     num: 解的个数
-     */
-    void dfs(int m, int n, pair<int,int>& pt, pair<int,int>& target, int& num ){
-        cout<<"("<<pt.first<<","<<pt.second<<")";
-        if(pt.second > n || pt.first > m){
-            cout<<"return"<<endl;
+    i,j: 当前位置
+    w,h: 迷宫宽高
+    result: 引用类型，保存返回结果
+    */
+    void dfs(int i, int j, int w, int h, int& result){
+        if(i<0||i>=h || j<0||j>=w){
             return ;
         }
-        if(pt.first == target.first && pt.second == target.second){
-            cout<<"found"<<endl;
-            num ++;
+    
+        if(i==h-1 && j==w-1){
+            result ++;
             return;
         }
         
-        //向右前进
-        pt.second += 1;
-        dfs(m,n,pt,target,num);
-        pt.second -= 1;
+        dfs(i+1,j,w,h,result);
+        dfs(i,j+1,w,h,result);
         
-        //向下前进
-        pt.first += 1;
-        dfs(m,n,pt,target,num);
-        pt.first -= 1;
-        cout<<"("<<pt.first<<","<<pt.second<<") return"<<endl;;
     }
-    
     int uniquePaths(int m, int n) {
-        pair<int,int> pt = {1,1};
-        pair<int,int> target = {m,n};
         int num = 0;
-        dfs(m,n,pt,target,num);
+        dfs(0,0,m,n,num);
         return num;
     }
 };

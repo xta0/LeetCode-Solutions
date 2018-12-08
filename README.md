@@ -14,13 +14,13 @@ Solutions are based on C++.
 - [] 54. Spirail Matrix
 - [x] 56. Merge Intervals
 - [] 65. Valid Number x2
-- [x] 67. Add Binary x2
+- [x] **67. Add Binary x4**
 - [x] 88. Merge Sorted Array
-- [x] 91.Decode Ways
-- [x] 124. Binary Tree Maximum Path Sum x3
+- [x] **91.Decode Ways x2**
+- [x] **124. Binary Tree Maximum Path Sum x3**
 - [] 128. Longest Consecutive Sequence
 - [x] 133. Clone Graph x2
-- [x] 138.Copy List with Random Pointer x3
+- [x] **138.Copy List with Random Pointer x3**
 - [x] **139. Word Break x2**
 - [] 143 Reorder List x2
 - [x] 157. Read N Characters Given Read4
