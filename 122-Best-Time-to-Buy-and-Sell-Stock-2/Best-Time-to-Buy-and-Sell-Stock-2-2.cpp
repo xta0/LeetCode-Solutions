@@ -6,7 +6,11 @@
 #include <unordered_map>
 using namespace std;
 
-//贪心法
+/*
+Solution: Greedy
+Time: O(n)
+Space: O(1)
+*/
 /*
 因为每天可以买卖数次，因此可以指定贪心策略为：
 1. 如果第二天价格比第一天高，就卖出
