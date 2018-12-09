@@ -3,6 +3,11 @@
 #include <string>
 using namespace std;
 
+/*
+Solution: DP
+Time: O(N^2)
+Space: O(N)
+*/
 class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
@@ -19,6 +24,7 @@ public:
         for(int i=1;i<sz;i++){
             int tmp = 0;
             for(int j=0;j<=i-1;j++){
+                //找到比n[i]小的j，同时在L中找长度L[j]最大的值
                 if(nums[j] < nums[i] && l[j] > tmp){
                     tmp = l[j];
                 }
