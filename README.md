@@ -19,7 +19,7 @@ Solutions are based on C++.
 - [x] **91.Decode Ways x2**
 - [x] **124. Binary Tree Maximum Path Sum x4**
 - [] 128. Longest Consecutive Sequence
-- [x] 133. Clone Graph x2
+- [x] **133. Clone Graph x2**
 - [x] **138.Copy List with Random Pointer x3**
 - [x] **139. Word Break x2**
 - [] 143 Reorder List x2
@@ -30,7 +30,7 @@ Solutions are based on C++.
 - [] 227. Basic Calculator II
 - [] 236. Lowest Common Ancestor
 - [x] **238. Product of Array Except Self x3**
-- [x] 215. Kth Largest Element in an Array
+- [x] **215. Kth Largest Element in an Array**
 - [x] 251. Flatten 2D Vector
 - [x] **253. Meeting Rooms II x7**
 - [x] **257. Binary Tree Paths x2**
@@ -38,7 +38,7 @@ Solutions are based on C++.
 - [x] 273.Integer to English Words
 - [x] **277. Find the Celebrityx2**
 - [x] 278. First Bad Version
-- [] 282. Expression Add Operators x2
+- [] **282. Expression Add Operators x2**
 - [x] 283. Move Zeroes
 - [] **286. Walls and Gates**
 - [x] **297. Serialize and Deserialize Binary Tree x3**
