@@ -6,7 +6,7 @@ Solutions are based on C++.
 - [] 17. Letter Combinations of a Phone Number
 - [] 21. Merge Two Sorted Lists 
 - [] 23. Merge K Sorted Lists 
-- [x] **29.Divide Two Integers x3**
+- [x] **29.Divide Two Integers x4**
 - [] **31. Next Permutation x2**
 - [] **34. Find First and Last Position of Element in Sorted Array x2**
 - [x] **50. pow**
@@ -17,7 +17,7 @@ Solutions are based on C++.
 - [x] **67. Add Binary x4**
 - [x] 88. Merge Sorted Array
 - [x] **91.Decode Ways x2**
-- [x] **124. Binary Tree Maximum Path Sum x3**
+- [x] **124. Binary Tree Maximum Path Sum x4**
 - [] 128. Longest Consecutive Sequence
 - [x] 133. Clone Graph x2
 - [x] **138.Copy List with Random Pointer x3**
@@ -33,8 +33,8 @@ Solutions are based on C++.
 - [x] 215. Kth Largest Element in an Array
 - [x] 251. Flatten 2D Vector
 - [x] **253. Meeting Rooms II x7**
-- [x] 257. Binary Tree Paths x2
-- [x] **269. Alien Dictionary x3**
+- [x] **257. Binary Tree Paths x2**
+- [x] **269. Alien Dictionary x4**
 - [x] 273.Integer to English Words
 - [x] **277. Find the Celebrityx2**
 - [x] 278. First Bad Version
