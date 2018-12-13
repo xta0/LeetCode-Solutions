@@ -8,21 +8,19 @@
 using namespace std;
 
 /*
-Solution: Hashmap
-Time: O(N)
-Space: O(N)
-
-Hashmap<int,int>: key is num, value is len
-
-Example:
-100, 4, 200, 1, 3, 2
-{100:1}
-{4:1}
-{200:2} -> 1+1 = 2 -> 100,200
-{1:1}
-{3:2} -> 1+1 = 2 -> 3,4
-{2:4} -> 1+2+1 = 4 -> 1,2,3,4
-*/
+ Solution: Hashmap
+ Time: O(N)
+ Space: O(N)
+ 
+ Hashmap<int,int>: key is num, value is len
+ 更新左右边界
+ Example:
+ 1,2,0,1,3
+ 1: um[1] = 1
+ 2: l=um[1]=1, r=0 -> um[2] = 1+1 = 2 -> um[1] = 2 | 12
+ 0: l=0, r=um[1]=2 -> um[0] = 2+1 = 3 -> um[1] = 3 | 123
+ 2: duplicated, skip
+ */
 
 class Solution {
 public:
@@ -30,23 +28,21 @@ public:
         
         unordered_map<int,int> um;
         for(auto& n : nums){
-            int r = 0;
-            int l = 0;
-            //check hashmap
-            if(um.count(n-1)){
-                l = nums[n-1];
+            if(um.count(n)){
+                continue;
             }
-            if(um.count(n+1)){
-                r = nums[n+1];
-            }
+            auto itor_l = um.find(n-1);
+            auto itor_r = um.find(n+1);
+            int l = itor_l != um.end()?itor_l->second:0;
+            int r = itor_r != um.end()?itor_r->second:0;
             if(r==0 && l==0){
-                nums[n] = 1;
+                um[n] = 1;
             }else if(r >0 && l>0){
-                nums[n] = r+l+1;
-            }else if(r > 0 &&  l==0){
-                nums[n] = r+1;
+                um[n] = um[n-l] = um[n+r]= r+l+1;
+            }else if(r > 0){
+                um[n] = um[n+r] = r+1;
             }else{
-                nums[n] = l+1;
+                um[n] = um[n-l] = l+1;
             }
         }
         int maxl = 0;
@@ -57,9 +53,11 @@ public:
     }
 };
 int main(){
-
-
-
-
+    
+    Solution s;
+    vector<int> arr = {1,2,0,1,3};
+    cout<<s.longestConsecutive(arr)<<endl;
+    
+    
     return 0;
 }

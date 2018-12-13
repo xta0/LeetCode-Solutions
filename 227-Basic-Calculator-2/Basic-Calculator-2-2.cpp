@@ -60,7 +60,7 @@ public:
 };
 int main(){
     Solution s;
-    cout<<s.calculate("3+2*2-1")<<endl;
+    cout<<s.calculate("5*10-4/2/1+1")<<endl;
 
 
 
