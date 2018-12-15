@@ -30,7 +30,7 @@ Solutions are based on C++.
 - [] 227. Basic Calculator II
 - [] 236. Lowest Common Ancestor
 - [x] **238. Product of Array Except Self x3**
-- [x] **215. Kth Largest Element in an Array**
+- [x] **215. Kth Largest Element in an Array x3**
 - [x] 251. Flatten 2D Vector
 - [x] **253. Meeting Rooms II x7**
 - [x] **257. Binary Tree Paths x2**
@@ -39,7 +39,7 @@ Solutions are based on C++.
 - [x] **277. Find the Celebrityx2**
 - [x] 278. First Bad Version
 - [] **282. Expression Add Operators x2**
-- [x] 283. Move Zeroes
+- [x] **283. Move Zeroes x2**
 - [] **286. Walls and Gates**
 - [x] **297. Serialize and Deserialize Binary Tree x3**
 - [x] **301. Remove Invalid Parentheses x5**
@@ -56,7 +56,7 @@ Solutions are based on C++.
 - [] 491. Increasing Subsequences
 - [] 494. Target Sum
 - [] 523. Continuous Subarray Sum
-- [] 543. Diameter of Binary Tree
+- [x] 543. Diameter of Binary Tree
 - [] 554. Brick Wall
 - [x] **560. Subarray Sum Equals K x6**
 - [x] 621. Task Scheduler x2

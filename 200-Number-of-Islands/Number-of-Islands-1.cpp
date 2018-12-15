@@ -3,6 +3,11 @@
 #include <string>
 using namespace std;
 
+/*
+Solution: DFS
+Time: O(N)
+Space: O(N)
+*/
 class Solution {
 public:
     void dfs(int i, int j, int w, int h, vector<vector<char>>& grid, vector<vector<bool>>& marks){
