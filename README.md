@@ -42,7 +42,7 @@ Solutions are based on C++.
 - [x] **283. Move Zeroes x2**
 - [] **286. Walls and Gates**
 - [x] **297. Serialize and Deserialize Binary Tree x3**
-- [x] **301. Remove Invalid Parentheses x5**
+- [x] **301. Remove Invalid Parentheses x6ss**
 - [] 304.Range Sum Query 2D 1. Immutable
 - [x] 314. Binary Tree Vertical Order Traversal
 - [x] 336. Palindrome Pairs

@@ -8,42 +8,44 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-//模板同112
+
+/*
+Solution: DFS
+Time: O(N)
+Space: O(N)
+*/
 class Solution {
-    void dfs(TreeNode* root, int& acc, int sum, vector<int>& chosen, vector<vector<int>>& result){
+public:
+    void dfs(TreeNode* root, int target, int sum, vector<int>& path, vector<vector<int>>& result){
         if(!root){
-            return ;
+            return;
         }
-        acc+=root->val;
-        chosen.push_back(root->val);
-        dfs(root->left,acc,sum,chosen,result);
-        dfs(root->right,acc,sum,chosen,result);
         
-        
-        //check leaf node
+        sum += root->val;
+        //choose
+        path.push_back(root->val);
+        /*
+        check leaf node
+        */
         if(!root->left && !root->right){
-            if(sum == acc){
-                result.push_back(chosen);
+            if(sum == target){
+                result.push_back(path);
             }
+            //no return here!
         }
+        dfs(root->left,target,sum,path,result);
+        dfs(root->right,target,sum,path,result);
         //backtracking
-        acc-=root->val;
-        chosen.pop_back();
+        path.pop_back();   
         
     }
-public:
     vector<vector<int>> pathSum(TreeNode* root, int sum) {
-        if(!root){
-            return {};
-        }
-        int acc = 0;
-        vector<int> chosen;
-        vector<vector<int>> result;
-        dfs(root,acc,sum,chosen, result);
-        return result;
+        vector<vector<int>> res;
+        vector<int> path;
+        dfs(root,sum,0,path,res);
+        return res;
     }
 };
-
 int main(){
 
 

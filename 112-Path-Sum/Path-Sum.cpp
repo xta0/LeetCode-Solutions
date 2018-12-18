@@ -7,35 +7,34 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-class Solution {
-    //dfs + backtracking
-    //dfs尽量不要设计返回值，很复杂，传入引用变量做判断条件
-    void dfs(TreeNode* root, int& sum, int target, bool& found){
+/*
+Solution: DFS
+Time: O(N)
+Space: O(N)
+*/
+class Solution {    
+    void dfs(TreeNode* root, int target, int sum, bool& result){
         if(!root){
             return;
         }
         sum += root->val;
-        dfs(root->left,sum,target,found);
-        dfs(root->right,sum,target,found);
-    
-        //检查叶节点位置
+        /*
+        check leaf node
+        */
         if(!root->left && !root->right){
             if(sum == target){
-                found =true;
-                return;
-            };
+                result = true;
+            }
         }
-        //backtracking
-        sum -= root->val;
+        dfs(root->left,target,sum,result);
+        dfs(root->right,target,sum,result);
+        
     }
 public:
     bool hasPathSum(TreeNode* root, int sum) {
-        if(!root){
-            return false;
-        }
-        int acc = 0;bool found=false;
-        dfs(root,acc, sum,found);
-        return found;
+        bool result = false;
+        dfs(root,sum,0,result);
+        return result;
     }
 };
 

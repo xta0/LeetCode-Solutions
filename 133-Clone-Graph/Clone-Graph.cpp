@@ -14,9 +14,12 @@ struct UndirectedGraphNode {
     vector<UndirectedGraphNode *> neighbors;
     UndirectedGraphNode(int x) : label(x) {};
 };
- 
- //dfs
- //https://www.educative.io/collection/page/5642554087309312/5679846214598656/50003
+ /*
+ Solution: Hashmap
+ Time: O(N)
+ Space: O(N)
+ */
+ //参考：https://www.educative.io/collection/page/5642554087309312/5679846214598656/50003
 class Solution {
 public:
     UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node) {
@@ -28,15 +31,14 @@ public:
         if(!node){
             return nullptr;
         }
+        if(um.count(node)){
+            return um[node];
+        }
         UndirectedGraphNode* root = new UndirectedGraphNode(node->label);
+        um[node] = root;
         for(auto orig : node->neighbors){
-            //orig has already been visited
-            if(um.count(orig)){
-                root->neighbors.push_back(um[orig]);
-            }else{
-                //递归
-                root->neighbors.push_back(dfs(orig,um));
-            }
+            //递归
+            root->neighbors.push_back(dfs(orig,um));
         }
         return root;
     }
