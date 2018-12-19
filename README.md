@@ -9,14 +9,14 @@ Solutions are based on C++.
 - [x] **29.Divide Two Integers x4**
 - [] **31. Next Permutation x2**
 - [] **34. Find First and Last Position of Element in Sorted Array x2**
-- [x] **50. pow**
+- [x] 50. pow
 - [x] 51. N-Queens
 - [] 54. Spirail Matrix
 - [x] 56. Merge Intervals
 - [] 65. Valid Number x2
 - [x] **67. Add Binary x4**
 - [x] 88. Merge Sorted Array
-- [x] **91.Decode Ways x2**
+- [x] **91.Decode Ways x3**
 - [x] **124. Binary Tree Maximum Path Sum x4**
 - [x] 128. Longest Consecutive Sequence
 - [x] **133. Clone Graph x2**
@@ -39,16 +39,16 @@ Solutions are based on C++.
 - [x] **277. Find the Celebrityx2**
 - [x] 278. First Bad Version
 - [] **282. Expression Add Operators x2**
-- [x] **283. Move Zeroes x2**
+- [x] **283. Move Zeroes x3**
 - [] **286. Walls and Gates**
 - [x] **297. Serialize and Deserialize Binary Tree x3**
 - [x] **301. Remove Invalid Parentheses x6ss**
 - [] 304.Range Sum Query 2D 1. Immutable
-- [x] 314. Binary Tree Vertical Order Traversal
+- [x] **314. Binary Tree Vertical Order Traversal x2**
 - [x] 336. Palindrome Pairs
 - [x] 341. Flatten Nested List Iterator
 - [x] 350. Intersection of Two Arrays II
-- [x] 413. Arithmetic Slices
+- [x] 413. Arithmetic Slicesf
 - [x] **426. Convert Binary Search Tree to Sorted Doubly Linked List x5**
 - [] 438. Find All Anagrams in a String
 - [x] 442. Find All Duplicates in an Array
