@@ -4,8 +4,8 @@ Solutions are based on C++.
 
 - [x] 10. Regular Expression
 - [] 17. Letter Combinations of a Phone Number
-- [] 21. Merge Two Sorted Lists 
-- [] 23. Merge K Sorted Lists 
+- [x] 21. Merge Two Sorted Lists 
+- [x] 23. Merge K Sorted Lists 
 - [x] **29.Divide Two Integers x4**
 - [] **31. Next Permutation x2**
 - [] **34. Find First and Last Position of Element in Sorted Array x2**
@@ -58,7 +58,7 @@ Solutions are based on C++.
 - [] 523. Continuous Subarray Sum
 - [x] 543. Diameter of Binary Tree
 - [] 554. Brick Wall
-- [x] **560. Subarray Sum Equals K x6**
+- [x] **560. Subarray Sum Equals K x7**
 - [x] 621. Task Scheduler x2
 - [] 689. Maximum Sum of 3 Non-Overlapping Subarrays
 - [] 670. Maximum Swap
