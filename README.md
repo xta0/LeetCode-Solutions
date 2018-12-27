@@ -2,7 +2,7 @@ Solutions are based on C++.
 
 ### FB
 
-- [x] 10. Regular Expression
+- [x] 10. Regular Expression x2
 - [] 17. Letter Combinations of a Phone Number
 - [x] 21. Merge Two Sorted Lists 
 - [x] 23. Merge K Sorted Lists 
@@ -21,7 +21,7 @@ Solutions are based on C++.
 - [x] 128. Longest Consecutive Sequence
 - [x] **133. Clone Graph x2**
 - [x] **138.Copy List with Random Pointer x3**
-- [x] **139. Word Break x2**
+- [x] **139. Word Break x3**
 - [] 143 Reorder List x2
 - [x] 157. Read N Characters Given Read4
 - [] **158. Read N Characters Given Read4 II x2**
@@ -41,7 +41,7 @@ Solutions are based on C++.
 - [] **282. Expression Add Operators x2**
 - [x] **283. Move Zeroes x3**
 - [] **286. Walls and Gates**
-- [x] **297. Serialize and Deserialize Binary Tree x3**
+- [x] **297. Serialize and Deserialize Binary Tree x4**
 - [x] **301. Remove Invalid Parentheses x6ss**
 - [] 304.Range Sum Query 2D 1. Immutable
 - [x] **314. Binary Tree Vertical Order Traversal x2**
