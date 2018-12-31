@@ -5,8 +5,11 @@
 
 using namespace std;
 
-//Using Deque
-//O(N)
+/*
+Solution: Deque
+Time: O(N)
+Space: O(k)
+*/
 class Solution {
 public:
     void adjustDeque(deque<int>& dq, int x){
