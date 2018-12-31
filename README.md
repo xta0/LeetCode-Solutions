@@ -1,14 +1,12 @@
 Solutions are based on C++.
 
-### FB
-
-- [x] 10. Regular Expression x2
+- [x] 10. Regular Expression x3
 - [] 17. Letter Combinations of a Phone Number
 - [x] 21. Merge Two Sorted Lists 
 - [x] 23. Merge K Sorted Lists 
 - [x] **29.Divide Two Integers x4**
 - [] **31. Next Permutation x3**
-- [] **34. Find First and Last Position of Element in Sorted Array x2**
+- [x] **34. Find First and Last Position of Element in Sorted Array x2**
 - [x] 50. pow
 - [x] 51. N-Queens
 - [] 54. Spirail Matrix
@@ -17,7 +15,7 @@ Solutions are based on C++.
 - [x] **67. Add Binary x4**
 - [x] 88. Merge Sorted Array
 - [x] **91.Decode Ways x3**
-- [x] **124. Binary Tree Maximum Path Sum x5**
+- [x] **124. Binary Tree Maximum Path Sum x6**
 - [x] 128. Longest Consecutive Sequence
 - [x] **133. Clone Graph x2**
 - [x] **138.Copy List with Random Pointer x3**
@@ -27,8 +25,8 @@ Solutions are based on C++.
 - [] **158. Read N Characters Given Read4 II x2**
 - [] 161. One Edit Distance
 - [x] 200. Number of Islands
-- [] 227. Basic Calculator II
-- [] 236. Lowest Common Ancestor
+- [x] 227. Basic Calculator II
+- [x] 236. Lowest Common Ancestor
 - [x] **238. Product of Array Except Self x3**
 - [x] **215. Kth Largest Element in an Array x3**
 - [x] 251. Flatten 2D Vector
@@ -39,18 +37,19 @@ Solutions are based on C++.
 - [x] **277. Find the Celebrityx2**
 - [x] 278. First Bad Version x2
 - [] **282. Expression Add Operators x2**
-- [x] **283. Move Zeroes x3**
+- [x] **283. Move Zeroes x4**
 - [] **286. Walls and Gates**
 - [x] **297. Serialize and Deserialize Binary Tree x4**
-- [x] **301. Remove Invalid Parentheses x6ss**
+- [x] **301. Remove Invalid Parentheses x6**
 - [] 304.Range Sum Query 2D 1. Immutable
 - [x] **314. Binary Tree Vertical Order Traversal x2**
 - [x] 336. Palindrome Pairs
 - [x] 341. Flatten Nested List Iterator
+- [x] 347. Top K
 - [x] 350. Intersection of Two Arrays II
 - [x] 413. Arithmetic Slicesf
 - [x] **426. Convert Binary Search Tree to Sorted Doubly Linked List x6**
-- [] 438. Find All Anagrams in a String
+- [x] 438. Find All Anagrams in a String
 - [x] 442. Find All Duplicates in an Array
 - [] 480. Sliding Window Median
 - [] 491. Increasing Subsequences
@@ -62,7 +61,7 @@ Solutions are based on C++.
 - [x] 621. Task Scheduler x2
 - [x] **560. Subarray Sum Equals K x6**
 - [x] **621. Task Scheduler x3**
-- [] 689. Maximum Sum of 3 Non-Overlapping Subarrays
+- [] 689. Maximum Sum of 3 Non-Overlapping Subarrays x2
 - [] 670. Maximum Swap
 - [x] 674. Longest Continuous Increasing Subsequence x2
 - [x] 703. Kth Largest Element in a Stream
