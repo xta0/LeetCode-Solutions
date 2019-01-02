@@ -2,33 +2,32 @@
 #include <iostream>
 using namespace std;
 
-class Solution
-{
+/*
+Solution: Brute Force
+Time: O(N)
+Space:O(1)
+*/
+class Solution {
 public:
-    int strStr(string haystack, string needle){
-        if(needle.length() == 0){
+    int strStr(string haystack, string needle) {
+        if(needle.size() > haystack.size()){
+            return -1;
+        }
+        if(haystack.empty() && needle.empty()){
             return 0;
         }
-        int index = -1;
-        int m = haystack.length();
-        int n = needle.length();
-        for (int i = 0; i <m-n+1; ++i)
-        {
-            if (haystack[i] == needle[0])
-            {
-                index = i;
-                for (int j = 0; j <n; ++j){
-                    if (needle[j] != haystack[i + j]){
-                        index = -1;
-                        break;
-                    }
+        for(int i=0;i<haystack.size();i++){
+            for(int j=i;j<haystack.size();j++){
+                if(j+needle.size() > haystack.size()){
+                    return -1;
                 }
-                if (index != -1){
-                    return i;
+                if(needle == haystack.substr(j,needle.size())){
+                    return j;
                 }
             }
         }
-        return index;
+        return -1;
+        
     }
 };
 

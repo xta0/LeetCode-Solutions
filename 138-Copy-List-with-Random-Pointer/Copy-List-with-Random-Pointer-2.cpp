@@ -15,9 +15,12 @@ struct RandomListNode {
     RandomListNode(int x) : label(x), next(NULL), random(NULL) {}
 };
 
-//Deep copy问题，使用hashmap+递归
-//类似Clone  Graph
-//O(n)
+/*
+Solution: Hashmap + 递归
+Time: O(N)
+Space: O(N)
+*/
+//Deep copy问题，使用hashmap+递归, 类似Clone  Graph
 class Solution {
 public:
     RandomListNode *copyRandomList(RandomListNode *head) {
