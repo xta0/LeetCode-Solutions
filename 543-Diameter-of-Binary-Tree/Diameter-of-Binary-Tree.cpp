@@ -28,7 +28,7 @@ public:
     int diameterOfBinaryTree(TreeNode* root) {
         if(!root){return 0;}
         if(!root->left && !root->right){ return 0; }
-        //每个节点的直径计算为：1(root) + depth(left) + depth(right) - 1
+        //每个节点的直径计算为：d = 1(root) + depth(left) + depth(right) - 1 (节点数-1)
         //递归计算
 
         int rt = depth(root->left)+depth(root->right);
