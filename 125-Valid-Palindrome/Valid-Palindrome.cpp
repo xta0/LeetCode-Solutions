@@ -7,25 +7,34 @@ using namespace std;
 class Solution {
 public:
     bool isPalindrome(string s) {
-        string ss;
-        for(auto c : s){
-            if(std::isalnum(c)){
-                c = isalpha(c) ? std::tolower(c,std::locale()):c;
-                ss.push_back(c);
-            }
+        if(s.empty()){
+            return true;
         }
-        int left = 0; int right = ss.length()-1;
-        while(left <= right){
-            if(ss[left] == ss[right]){
-                left ++;
-                right--;
+        int l=0;
+        int r = s.size()-1;
+        while(l<=r){
+            char cl = tolower(s[l]);
+            char cr = tolower(s[r]);
+            if(!isalnum(cl) || isspace(cl)){
+                l++;
+                continue;
+            }
+            if(!isalnum(cr) || isspace(cr)){
+                r--;
+                continue;
+            }
+            if(cl == cr){
+                l++;
+                r--;
             }else{
                 return false;
             }
         }
+        
         return true;
     }
 };
+
 
 
 int main(){

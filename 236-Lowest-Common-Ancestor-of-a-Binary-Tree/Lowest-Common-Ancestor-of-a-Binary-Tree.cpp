@@ -25,6 +25,18 @@ public:
         if(left && right){
             return root;
         }
+
+        /*
+            #
+           / \
+          #  #
+            /|
+           @ --> right (no need to continue to search )
+          /|
+         #  #
+            /
+            @ -->left
+        */
         if(!left){
             return right;
         }

@@ -3,50 +3,50 @@
 using namespace std;
 
 class Solution {
-private:
-    //逐位累加，直到某个string为空，返回进位
-    void add(string& a, string& b, string& ret, bool& carry ){
-        if(a.size() == 0 || b.size() == 0){
-            return ;
-        }
-        int x = a.back() == '0'? 0:1; a.pop_back();
-        int y = b.back() == '0'? 0:1; b.pop_back();
-        int z = x^y;
-        bool carry1 = x&y;
+    char add(char c1, char c2, bool& carry){
+        int d1 = c1-'0';
+        int d2 = c2-'0';
+        int d = d1^d2;
+        bool carry1 = d1 & d2;
         bool carry2 = false;
-        int sum = z;
         if(carry){
-            sum = z^1;
-            carry2 = z&1;
+            carry2 = d&1;
+            d = d^1;
         }
-        ret = sum==0?("0"+ret):("1"+ret);
         carry = carry1 || carry2;
-        //递归
-        add(a,b,ret,carry);
+        return d+'0';
+        
     }
 public:
     string addBinary(string a, string b) {
-        string ret="";
-        bool carry = false;
-        add(a,b,ret,carry);
-        //处理剩余字符串，主要考虑是否有进位
-        string str = a.size()>0?a:b;
-        for(int i = (int)str.size()-1; i>=0; i--){
-            int x = str[i] =='0'?0:1;
-            int sum = x;
-            if(carry){
-                sum = x^1;
-                carry = x&1;
-            }
-            ret=sum==0?"0"+ret:"1"+ret;
+        int sz1 = a.size();
+        int sz2 = b.size();
+        if(!sz1){
+            return b;
+        }
+        if(!sz2){
+            return a;
+        }
+        //add padding zeros
+        if(sz1 > sz2){
+            b.insert(b.begin(),sz1-sz2,'0');
+        }
+        if(sz2>sz1){
+            a.insert(a.begin(),sz2-sz1,'0');
+        }
+        int i = a.size()-1;
+        bool carry=false;;
+        string res="";
+        while(i>=0){
+            res.insert(res.begin(),add(a[i],b[i],carry));
+            i--;
         }
         if(carry){
-            ret = "1"+ret;
+            res.insert(res.begin(),'1');
         }
-        return ret;
+        return res;
     }
 };
-
 int main(){
     
     Solution s;
